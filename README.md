@@ -22,3 +22,5 @@ To [The_Regulated_Friction_Project](https://github.com/Leerrooy95/The_Regulated_
 I have my Discord and email in the profile description 
 
 If anyone has any questions, concerns, or want to collaborate feel fre to reach out!
+
+*Last updated: February 13, 2026*
