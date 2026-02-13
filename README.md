@@ -15,12 +15,12 @@
 **Where I finally scraped data with python script, inspected it, and got solid correlations**
 
 
-**I've developed skills, had a good time, and look foeard to learning more!**
+**I've developed skills, had a good time, and look forward to learning more!**
 
 ---
 
 *I have my Discord and email in the profile description*
 
-*If anyone has any questions, concerns, or want to collaborate feel fre to reach out!*
+*If anyone has any questions, concerns, or want to collaborate feel free to reach out!*
 
 *Last updated: February 13, 2026*
