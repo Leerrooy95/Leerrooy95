@@ -1,11 +1,11 @@
-## OSINT Researcher | Investigative Data Support
-
-**19D Veteran** building statistically validated research frameworks for temporal pattern analysis, capital flow tracking, and institutional accountability.
-
 ![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
 ![Scrapy](https://img.shields.io/badge/Scrapy-60A839?style=flat&logo=scrapy&logoColor=white)
 ![Statistics](https://img.shields.io/badge/Statistics-Pearson%20|%20Granger%20|%20Chi--Square-blue)
+
+## OSINT Researcher | Investigative Data Support
+
+**19D Veteran** building statistically validated research frameworks for temporal pattern analysis, capital flow tracking, and institutional accountability.
 
 ---
 
