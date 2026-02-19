@@ -1,4 +1,3 @@
-```markdown
 ## OSINT Researcher | Investigative Data Support
 
 **19D Veteran** building statistically validated research frameworks for temporal pattern analysis, capital flow tracking, and institutional accountability.
@@ -44,4 +43,3 @@ Middle repos taught me the hard way about AI hallucinations. Those repos are now
 ---
 
 *Last updated: February 19, 2026*
-```
