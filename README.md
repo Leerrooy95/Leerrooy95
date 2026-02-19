@@ -1,28 +1,47 @@
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)
+```markdown
+## OSINT Researcher | Investigative Data Support
 
-## Hey there, welcome to the profile! 👋
+**19D Veteran** building statistically validated research frameworks for temporal pattern analysis, capital flow tracking, and institutional accountability.
 
-**My profile documents my journey learning data science**
-
----
-
-*From [UVB-76](https://github.com/Leerrooy95/UVB-76-Structured-Signal-Analysis)*
-**Where I gathered data by hand**
-
-*To my middle repos where I learned the hard way about AI hallucinations.*
-**These repos are now corrected, scrubbed, and serve as a lesson in data verification.**
-
-
-*Finally, [The_Regulated_Friction_Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)*
-**Where I finally scraped data with python script, inspected it, and got solid correlations**
-
-
-**I've developed skills, had a good time, and look forward to learning more!**
+![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![Scrapy](https://img.shields.io/badge/Scrapy-60A839?style=flat&logo=scrapy&logoColor=white)
+![Statistics](https://img.shields.io/badge/Statistics-Pearson%20|%20Granger%20|%20Chi--Square-blue)
 
 ---
 
-*I have my Discord and email in the profile description*
+### 📌 Featured: [The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)
 
-*If anyone has any questions, concerns, or want to collaborate feel free to reach out!*
+Documents statistically significant correlations between high-visibility events and institutional positioning.
 
-*Last updated: February 13, 2026*
+| Finding | Value |
+|---------|-------|
+| Core correlation | r = +0.6196 (p = 0.0004) |
+| Methodology | Multi-AI verification, permutation testing, Granger causality |
+| Scope | 2,100+ events, 30+ weeks, 10+ entity 13F tracking |
+
+---
+
+### 📈 The Journey
+
+Started with [UVB-76](https://github.com/Leerrooy95/UVB-76-Structured-Signal-Analysis) — gathering data by hand, learning pattern recognition.
+
+Middle repos taught me the hard way about AI hallucinations. Those repos are now corrected and serve as lessons in data verification.
+
+[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project) is where methodology caught up with ambition — automated scraping, statistical validation, reproducible findings.
+
+---
+
+### 🤝 Available For
+
+- Investigative data support
+- OSINT research collaboration  
+- Temporal correlation analysis
+- 13F/capital flow tracking
+
+**Contact:** Discord and email in profile description
+
+---
+
+*Last updated: February 19, 2026*
+```
