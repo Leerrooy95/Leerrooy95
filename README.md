@@ -1,7 +1,7 @@
 ![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
 ![Scrapy](https://img.shields.io/badge/Scrapy-60A839?style=flat&logo=scrapy&logoColor=white)
-![Statistics](https://img.shields.io/badge/Statistics-Pearson%20|%20Granger%20|%20Chi--Square-blue)
+![Statistics](https://img.shields.io/badge/Statistics-Correlation%20|%20Significance%20Testing-blue)
 
 ## OSINT Researcher | Investigative Data Support
 
