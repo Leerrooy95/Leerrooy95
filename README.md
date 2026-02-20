@@ -27,6 +27,8 @@ Started with [UVB-76](https://github.com/Leerrooy95/UVB-76-Structured-Signal-Ana
 
 Middle repos taught me the hard way about AI hallucinations. Those repos are now corrected and serve as lessons in data verification.
 
+I picked up from there, downloaded scattered **[Arkansas Department of Corrections](https://github.com/Leerrooy95/Arkansas-DOC-Expenditures-2015-2025)** PDFs, and OCRing them into a clean datasets, which I them analyzed the data and reported my output to the repo linked in this paragraph.
+
 [The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project) is where methodology caught up with ambition — automated scraping, statistical validation, reproducible findings.
 
 ---
