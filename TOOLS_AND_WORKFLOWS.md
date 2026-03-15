@@ -3,7 +3,7 @@
 A reference for AI assistants and collaborators. Describes every active repository, tool, pipeline, and deployment so full context doesn't need to be re-gathered each time.
 
 **Author:** Austin Smith ([@Leerrooy95](https://github.com/Leerrooy95))
-**Last Updated:** March 13, 2026
+**Last Updated:** March 15, 2026
 
 ---
 
@@ -11,7 +11,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 | Service | URL | Hosted On | Source Repo |
 |---------|-----|-----------|-------------|
-| Live Intelligence Dashboard | [regulatedfriction.me](https://regulatedfriction.me) | GitHub Pages (Live_Trackers) | [Live_Trackers](https://github.com/Leerrooy95/Live_Trackers) |
+| Live Intelligence Dashboard | [regulatedfriction.me](https://regulatedfriction.me) | GitHub Pages (Live_Trackers, private) | — |
 | Portfolio Website | [leerrooy95.github.io](https://leerrooy95.github.io) | GitHub Pages | [leerrooy95.github.io](https://github.com/Leerrooy95/leerrooy95.github.io) |
 | OSINT ChatBot | [personal-chatbot-qej0.onrender.com](https://personal-chatbot-qej0.onrender.com/login) | Render (free tier) | [OSINT_ChatBot](https://github.com/Leerrooy95/OSINT_ChatBot) |
 | Bill Translator | [bill-translator.onrender.com](https://bill-translator.onrender.com/) | Render (free tier) | [Bill_Translator](https://github.com/Leerrooy95/Bill_Translator) |
@@ -20,7 +20,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ## Active Repositories
 
-### 1. The Regulated Friction Project (v10.6)
+### 1. The Regulated Friction Project (v10.7)
 
 **Purpose:** Research-only information repository. Documents temporal correlations between geopolitical friction events and institutional capital flows (2015–2026).
 
@@ -29,36 +29,37 @@ A reference for AI assistants and collaborators. Describes every active reposito
 - `_AI_CONTEXT_INDEX/` — 12 structured markdown files + Node Dossiers used by AI assistants and the OSINT ChatBot
 - `Project_Trident/` — independent verification suite (16 statistical tests by Opus 4.6)
 - `Run_Correlations_Yourself/` — reproducibility scripts
-- `output/` — daily data synced from Live_Trackers
+- `output/` — daily data synced from Live_Trackers pipeline
 
 **Workflows:**
 - `sync_from_live_trackers.yml` — pulls latest pipeline output from Live_Trackers daily at 10:00 UTC
 
 **Core statistics:** r = +0.6196 (p = 0.0004), 66 verified event pairs, 7-day median lag
 
-**Note:** The Streamlit dashboard has been retired. All live monitoring is now in Live_Trackers. Deprecated files (Streamlit source, Scrapy spider, old workflows) are in `Archive/`.
+**Note:** The Streamlit dashboard has been retired. All live monitoring is in Live_Trackers (now private). Deprecated files (Streamlit source, Scrapy spider, old workflows) are in `Archive/`.
 
 ---
 
-### 2. Live_Trackers (v2.0)
+### 2. Live_Trackers (v2.0) — **Private Repository**
 
 **Purpose:** Unified real-time intelligence pipeline powering the live dashboard at regulatedfriction.me.
 
-**Five-stage pipeline:**
+**Six-stage pipeline:**
 
 | Stage | Script | AI Model | Function |
 |-------|--------|----------|----------|
-| 1 | `node_tracker.py` | Perplexity sonar-pro | Queries current status of 7 leverage nodes, classifies events |
+| 1 | `node_tracker.py` | Perplexity sonar-pro | Queries current status of leverage nodes, classifies events |
 | 2 | `entity_extractor.py` | Llama Scout 17B | Extracts entities, relationships, temporal markers from node data |
 | 3 | `convergence_detector.py` | Local (no API) | Detects multi-node convergence patterns from historical runs |
-| 4 | `daily_intelligence.py` | Perplexity sonar-pro | Tracks 8 signals, scans 59 entities for breaking news, verifies predictions |
+| 4 | `daily_intelligence.py` | Perplexity sonar-pro | Tracks signals, scans entities for breaking news, verifies predictions |
 | 5 | `fact_checker.py` | Anthropic Claude Sonnet | Fact-checks all output, corrects errors in-place |
+| 6 | `rhetoric_reality.py` | Anthropic Claude | Three-column gap analysis (rhetoric vs. reality) with statute citations |
 
 **Leverage nodes tracked:** Maxwell, Iran, Gulf SWF, Israel, Oracle/Ellison, Epstein Files, Arkansas Datacenter
 
-**Output:** JSON files in `output/` — node_status, extracted_entities, convergence_report, daily_intelligence, live_verification, fact_check. Timestamped copies in `output/history/`.
+**Output:** JSON files in `output/` — node_status, extracted_entities, convergence_report, daily_intelligence, live_verification, fact_check, rhetoric_reality. Timestamped copies in `output/history/`.
 
-**Dashboard:** Static HTML/CSS/JS in `docs/` served via GitHub Pages at regulatedfriction.me. Shows node status cards, intelligence summary, convergence analysis, predictions, entity extraction, history, and fact-check results.
+**Dashboard:** Eight-tab static HTML/CSS/JS at regulatedfriction.me (**Node Status**, **Intelligence**, **Convergence**, **Predictions**, **Entities**, **Charts**, **Rhetoric vs. Reality**, **History**). Chart.js visualizations: Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap. Embedded Gradient AI chatbot with `_AI_CONTEXT_INDEX` knowledge base.
 
 **Workflows:**
 - `run_pipeline.yml` — runs the full pipeline twice daily (08:00 / 20:00 UTC), publishes to dashboard
@@ -67,6 +68,8 @@ A reference for AI assistants and collaborators. Describes every active reposito
 **API budget:** Node tracker: 50 calls/day. Daily intelligence: 75 calls/day. Llama Scout: 1 call/run. Convergence: no API calls.
 
 **Required secrets:** `PERPLEXITY_API_KEY`, `LLAMA_SCOUT_KEY`, `ANTHROPIC_API_KEY`
+
+**Note:** This repository is private. The website and pipeline remain active.
 
 ---
 
@@ -218,7 +221,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ## Workflow Patterns
 
-### Automated Intelligence Pipeline (Live_Trackers)
+### Automated Intelligence Pipeline (Live_Trackers — private)
 ```
 GitHub Actions (08:00/20:00 UTC)
   → node_tracker.py (Perplexity)
@@ -226,6 +229,7 @@ GitHub Actions (08:00/20:00 UTC)
   → convergence_detector.py (local)
   → daily_intelligence.py (Perplexity)
   → fact_checker.py (Anthropic Claude)
+  → rhetoric_reality.py (Anthropic Claude)
   → publish to docs/data/ → regulatedfriction.me
 ```
 

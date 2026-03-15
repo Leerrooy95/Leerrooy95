@@ -18,7 +18,9 @@
 
 ### 📌 Featured Projects
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v10.6)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. Processed 8 years of data across 66 verified event pairs. Independently stress-tested by 16 statistical robustness scripts (Opus 4.6). Includes a structured AI context index (12 files + node dossiers), reproducible correlation scripts, and a 15-section research corpus. Live monitoring has moved to the [Live_Trackers](https://github.com/Leerrooy95/Live_Trackers) pipeline.
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v10.7)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. Processed 8 years of data across 66 verified event pairs. Independently stress-tested by 16 statistical robustness scripts (Opus 4.6). Includes a structured AI context index (12 files + node dossiers), reproducible correlation scripts, and a 15-section research corpus.
+
+The live dashboard at **[regulatedfriction.me](https://regulatedfriction.me)** is powered by a six-stage automated intelligence pipeline running twice daily via GitHub Actions: Perplexity sonar-pro queries leverage node status → Llama Scout 17B extracts entities and relationships → local convergence detection → daily intelligence with signal tracking and prediction verification → Anthropic Claude fact-checks all output → Rhetoric vs. Reality gap analysis with statute citations. The eight-tab dashboard (Node Status, Intelligence, Convergence, Predictions, Entities, Charts, Rhetoric vs. Reality, History) features Chart.js visualizations (Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap) and an embedded Gradient AI chatbot loaded with the project knowledge base.
 
 | Finding | Value |
 |---------|-------|
@@ -26,9 +28,7 @@
 | Convergence correlation | r = +0.6685 (p < 0.0001, n = 229 weeks) |
 | Robustness | Permutation (p < 0.001), Granger causality (F = 32.49, p < 0.0001), bootstrap (p = 0.008) |
 | Independent verification | 16 statistical tests by Opus 4.6 — all passed |
-| Predictions | 25 falsifiable — 4 publicly failed, 11 confirmed, rest tracked |
-
-**[Live Trackers](https://github.com/Leerrooy95/Live_Trackers)** *(v2.0)* — Unified five-stage intelligence pipeline powering the live dashboard at [regulatedfriction.me](https://regulatedfriction.me). Runs twice daily via GitHub Actions: Perplexity sonar-pro queries node status → Llama Scout 17B extracts entities → local convergence detection → daily intelligence with signal tracking and prediction verification → Anthropic Claude fact-checks all output. Monitors 7 leverage nodes, 8 active signals, and 59 tracked entities with entity disambiguation and automated API budgeting.
+| Predictions | Falsifiable predictions tracked publicly — failures documented alongside confirmations |
 
 **[OSINT ChatBot](https://github.com/Leerrooy95/OSINT_ChatBot)** — BYOK (Bring Your Own Key) Flask chatbot deployed on Render. Users provide their own Anthropic API key — the server never stores it. The knowledge base is loaded from the project's `_AI_CONTEXT_INDEX/` at startup and injected into every system prompt. Features rate limiting, CSRF protection, DOMPurify sanitization, and full security headers.
 
@@ -48,9 +48,7 @@ Middle repos taught me the hard way about AI hallucinations. Those repos are cor
 
 Picked up from there by downloading scattered **[Arkansas Department of Corrections](https://github.com/Leerrooy95/Arkansas-DOC-Expenditures-2015-2025)** PDFs, OCR'ing them into clean datasets, and analyzing spending patterns that hadn't been aggregated before.
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** is where methodology caught up with ambition — automated scraping, statistical validation, reproducible findings, and a live intelligence dashboard. Now at v10.6 with 16 independent robustness tests, a structured AI context index, and a research corpus spanning 15 sections.
-
-**[Live Trackers](https://github.com/Leerrooy95/Live_Trackers)** consolidated everything operational into a five-stage pipeline — node tracking, entity extraction, convergence detection, daily intelligence, and fact-checking — all running on GitHub Actions and publishing to a live static dashboard at [regulatedfriction.me](https://regulatedfriction.me).
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** is where methodology caught up with ambition — automated scraping, statistical validation, reproducible findings, and a live intelligence dashboard. Now at v10.7 with 16 independent robustness tests, a structured AI context index, a research corpus spanning 15 sections, and a six-stage pipeline publishing to an eight-tab dashboard at [regulatedfriction.me](https://regulatedfriction.me).
 
 **[State Policy Analysis](https://github.com/Leerrooy95/State_Policy_Analysis)** applied the same rigor at the state level — tracking data center legislation across 27 states, running causal inference (DoWhy), and transparently correcting three prior findings that turned out to be methodological artifacts.
 
@@ -62,9 +60,9 @@ Picked up from there by downloading scattered **[Arkansas Department of Correcti
 
 ### 🔧 What I Build
 
-- **Automated OSINT pipelines** — multi-agent LLM extraction (Perplexity → Llama Scout → Claude), entity disambiguation, convergence detection, fact-checking
+- **Automated OSINT pipelines** — multi-agent LLM extraction (Perplexity → Llama Scout → Claude), entity disambiguation, convergence detection, rhetoric vs. reality gap analysis, fact-checking
 - **Temporal correlation frameworks** — lag analysis, permutation testing, Granger causality, convergence modeling, DoWhy causal inference
-- **Live dashboards** — Static HTML/CSS/JS dashboard at regulatedfriction.me, fed by GitHub Actions twice daily
+- **Live dashboards** — eight-tab HTML/CSS/JS dashboard at regulatedfriction.me, fed by a six-stage pipeline twice daily via GitHub Actions
 - **AI-powered chatbots** — BYOK Flask apps with knowledge base injection, session security, and rate limiting
 - **Civic technology** — Flask web apps with NLP, meaning drift detection, and readability scoring
 - **State-level policy analysis** — federal funding tracking, posture classification, temporal lag engines, transparent corrections
@@ -83,4 +81,4 @@ Picked up from there by downloading scattered **[Arkansas Department of Correcti
 
 ---
 
-**Last Updated:** *March 13, 2026*
+**Last Updated:** *March 15, 2026*
