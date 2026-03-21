@@ -6,6 +6,8 @@
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
 ![HTML/CSS/JS](https://img.shields.io/badge/HTML%2FCSS%2FJS-E34F26?style=flat&logo=html5&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=flat&logo=render&logoColor=white)
+![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flat&logo=digitalocean&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=flat&logo=chartdotjs&logoColor=white)
 ![Statistics](https://img.shields.io/badge/Statistics-Correlation%20|%20Permutation%20Testing%20|%20Granger%20Causality-blue)
 
 ## Threat Intelligence Analyst | OSINT & Quantitative Methods
@@ -18,9 +20,11 @@
 
 ### 📌 Featured Projects
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v10.7)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. Processed 8 years of data across 66 verified event pairs. Independently stress-tested by 16 statistical robustness scripts (Opus 4.6). Includes a structured AI context index (12 files + node dossiers), reproducible correlation scripts, and a 15-section research corpus.
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v10.9)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. Processed 8 years of data across 66 verified event pairs. Independently stress-tested by 16 statistical robustness scripts (Opus 4.6). Includes a structured AI context index (12 files + node dossiers tracking 12 active leverage nodes), reproducible correlation scripts, and a 16-section research corpus including a religious infrastructure layer.
 
-The live dashboard at **[regulatedfriction.me](https://regulatedfriction.me)** is powered by a six-stage automated intelligence pipeline running twice daily via GitHub Actions: Perplexity sonar-pro queries leverage node status → Llama Scout 17B extracts entities and relationships → local convergence detection → daily intelligence with signal tracking and prediction verification → Anthropic Claude fact-checks all output → Rhetoric vs. Reality gap analysis with statute citations. The eight-tab dashboard (Node Status, Intelligence, Convergence, Predictions, Entities, Charts, Rhetoric vs. Reality, History) features Chart.js visualizations (Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap) and an embedded Gradient AI chatbot loaded with the project knowledge base.
+The live dashboard at **[regulatedfriction.me](https://regulatedfriction.me)** is powered by a six-stage automated intelligence pipeline running twice daily via GitHub Actions: Perplexity sonar-pro queries leverage node status → Llama Scout 17B extracts entities and relationships → local convergence detection → daily intelligence with signal tracking and prediction verification → Anthropic Claude fact-checks all output → Rhetoric vs. Reality gap analysis with statute citations. The eight-tab dashboard (Node Status, Intelligence, Convergence, Predictions, Entities, Charts, Rhetoric vs. Reality, History) features Chart.js visualizations (Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap), a Prediction Tracker displaying confirmed and failed predictions publicly, and an embedded **Gradient AI chatbot** loaded with the full project knowledge base for interactive queries.
+
+Additional automated infrastructure includes DigitalOcean-hosted scrapers (Federal Register, DOJ press releases) and a crypto monitoring pipeline tracking stablecoin capital flows (USD1/WLF/MGX architecture).
 
 | Finding | Value |
 |---------|-------|
@@ -48,7 +52,7 @@ Middle repos taught me the hard way about AI hallucinations. Those repos are cor
 
 Picked up from there by downloading scattered **[Arkansas Department of Corrections](https://github.com/Leerrooy95/Arkansas-DOC-Expenditures-2015-2025)** PDFs, OCR'ing them into clean datasets, and analyzing spending patterns that hadn't been aggregated before.
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** is where methodology caught up with ambition — automated scraping, statistical validation, reproducible findings, and a live intelligence dashboard. Now at v10.7 with 16 independent robustness tests, a structured AI context index, a research corpus spanning 15 sections, and a six-stage pipeline publishing to an eight-tab dashboard at [regulatedfriction.me](https://regulatedfriction.me).
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** is where methodology caught up with ambition — automated scraping, statistical validation, reproducible findings, and a live intelligence dashboard. Now at v10.9 with 16 independent robustness tests, a structured AI context index tracking 12 active leverage nodes, a research corpus spanning 16 sections (including a religious infrastructure layer), a six-stage pipeline publishing to an eight-tab dashboard at [regulatedfriction.me](https://regulatedfriction.me), and a Gradient AI chatbot for interactive queries against the full knowledge base.
 
 **[State Policy Analysis](https://github.com/Leerrooy95/State_Policy_Analysis)** applied the same rigor at the state level — tracking data center legislation across 27 states, running causal inference (DoWhy), and transparently correcting three prior findings that turned out to be methodological artifacts.
 
@@ -56,17 +60,27 @@ Picked up from there by downloading scattered **[Arkansas Department of Correcti
 
 **[OSINT ChatBot](https://github.com/Leerrooy95/OSINT_ChatBot)** extended the research into an interactive BYOK chatbot — giving anyone access to query the full knowledge base through Claude, with proper security, rate limiting, and session management.
 
+The common thread across all of it is **multi-AI verification** — using multiple models (Claude, Perplexity, Llama Scout, Gemini, Grok) to cross-check each other's outputs, catch hallucinations, and stress-test claims before anything gets published. Every model has blind spots. The pipeline is designed so no single model's output goes unverified.
+
 ---
 
 ### 🔧 What I Build
 
 - **Automated OSINT pipelines** — multi-agent LLM extraction (Perplexity → Llama Scout → Claude), entity disambiguation, convergence detection, rhetoric vs. reality gap analysis, fact-checking
+- **Multi-AI verification systems** — cross-model validation using Claude, Perplexity, Llama Scout, Gemini, and Grok to catch hallucinations and verify claims before publication
 - **Temporal correlation frameworks** — lag analysis, permutation testing, Granger causality, convergence modeling, DoWhy causal inference
-- **Live dashboards** — eight-tab HTML/CSS/JS dashboard at regulatedfriction.me, fed by a six-stage pipeline twice daily via GitHub Actions
-- **AI-powered chatbots** — BYOK Flask apps with knowledge base injection, session security, and rate limiting
+- **Live dashboards** — eight-tab HTML/CSS/JS dashboard at regulatedfriction.me with Chart.js visualizations, fed by a six-stage pipeline twice daily via GitHub Actions
+- **AI-powered chatbots** — BYOK Flask apps with knowledge base injection, session security, and rate limiting; Gradient AI chatbot with live dashboard context injection
+- **Automated scrapers** — DigitalOcean-hosted scrapers for Federal Register and DOJ press releases; crypto capital flow monitoring (USD1/WLF/MGX stablecoin architecture)
 - **Civic technology** — Flask web apps with NLP, meaning drift detection, and readability scoring
 - **State-level policy analysis** — federal funding tracking, posture classification, temporal lag engines, transparent corrections
 - **Reproducible research** — every finding ships with the scripts to verify it; failed predictions documented publicly
+
+---
+
+### 💼 Commercial Product
+
+I'm preparing a portable version of the intelligence pipeline architecture as a `.tar.xz` package — a turnkey setup requiring only three API keys (two paid, total operating cost under $5/month) with minimal configuration on the user's end. Sales platform and pricing to be announced once account verification is complete.
 
 ---
 
@@ -75,10 +89,11 @@ Picked up from there by downloading scattered **[Arkansas Department of Correcti
 - Threat intelligence and OSINT analyst roles
 - Investigative data support and newsroom partnerships
 - Temporal pattern analysis and capital flow tracking
+- Freelance intelligence pipeline development and consulting
 - Open-source collaboration on accountability tools
 
 **Contact:** Discord and email in profile description
 
 ---
 
-**Last Updated:** *March 15, 2026*
+**Last Updated:** *March 21, 2026*
