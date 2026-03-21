@@ -3,7 +3,7 @@
 A reference for AI assistants and collaborators. Describes every active repository, tool, pipeline, and deployment so full context doesn't need to be re-gathered each time.
 
 **Author:** Austin Smith ([@Leerrooy95](https://github.com/Leerrooy95))
-**Last Updated:** March 15, 2026
+**Last Updated:** March 21, 2026
 
 ---
 
@@ -12,6 +12,9 @@ A reference for AI assistants and collaborators. Describes every active reposito
 | Service | URL | Hosted On | Source Repo |
 |---------|-----|-----------|-------------|
 | Live Intelligence Dashboard | [regulatedfriction.me](https://regulatedfriction.me) | GitHub Pages (Live_Trackers, private) | — |
+| Gradient AI Chatbot | Embedded on regulatedfriction.me | Gradient AI (DigitalOcean) | — |
+| Federal Register Scraper | Automated | DigitalOcean | Private |
+| DOJ Press Release Scraper | Automated | DigitalOcean | Private |
 | Portfolio Website | [leerrooy95.github.io](https://leerrooy95.github.io) | GitHub Pages | [leerrooy95.github.io](https://github.com/Leerrooy95/leerrooy95.github.io) |
 | OSINT ChatBot | [personal-chatbot-qej0.onrender.com](https://personal-chatbot-qej0.onrender.com/login) | Render (free tier) | [OSINT_ChatBot](https://github.com/Leerrooy95/OSINT_ChatBot) |
 | Bill Translator | [bill-translator.onrender.com](https://bill-translator.onrender.com/) | Render (free tier) | [Bill_Translator](https://github.com/Leerrooy95/Bill_Translator) |
@@ -20,13 +23,14 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ## Active Repositories
 
-### 1. The Regulated Friction Project (v10.7)
+### 1. The Regulated Friction Project (v10.9)
 
 **Purpose:** Research-only information repository. Documents temporal correlations between geopolitical friction events and institutional capital flows (2015–2026).
 
 **Key contents:**
-- 15-section research corpus (00_Quick_Breakdowns through 14_Files)
-- `_AI_CONTEXT_INDEX/` — 12 structured markdown files + Node Dossiers used by AI assistants and the OSINT ChatBot
+- 16-section research corpus (00_Quick_Breakdowns through 15_The_Religious_Layer)
+- `_AI_CONTEXT_INDEX/` — 12 structured markdown files + Node Dossiers (12 active leverage nodes) used by AI assistants and the OSINT ChatBot
+- `15_The_Religious_Layer/` — Religious infrastructure mapping (Paula White, Capitol Ministries, CUFI/Hagee, CREC/Wilson, Hegseth convergence node)
 - `Project_Trident/` — independent verification suite (16 statistical tests by Opus 4.6)
 - `Run_Correlations_Yourself/` — reproducibility scripts
 - `output/` — daily data synced from Live_Trackers pipeline
@@ -36,11 +40,13 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 **Core statistics:** r = +0.6196 (p = 0.0004), 66 verified event pairs, 7-day median lag
 
+**Active leverage nodes (12):** Maxwell, Iran, Gulf SWFs, Israel, Epstein Files, Oracle/Ellison, Arkansas Datacenter, Religious Layer, April 2026 Convergence Window, Zorro Ranch/NM Investigation (+ 2 additional sub-nodes)
+
 **Note:** The Streamlit dashboard has been retired. All live monitoring is in Live_Trackers (now private). Deprecated files (Streamlit source, Scrapy spider, old workflows) are in `Archive/`.
 
 ---
 
-### 2. Live_Trackers (v2.0) — **Private Repository**
+### 2. Live_Trackers (v2.1) — **Private Repository**
 
 **Purpose:** Unified real-time intelligence pipeline powering the live dashboard at regulatedfriction.me.
 
@@ -55,11 +61,11 @@ A reference for AI assistants and collaborators. Describes every active reposito
 | 5 | `fact_checker.py` | Anthropic Claude Sonnet | Fact-checks all output, corrects errors in-place |
 | 6 | `rhetoric_reality.py` | Anthropic Claude | Three-column gap analysis (rhetoric vs. reality) with statute citations |
 
-**Leverage nodes tracked:** Maxwell, Iran, Gulf SWF, Israel, Oracle/Ellison, Epstein Files, Arkansas Datacenter
+**Leverage nodes tracked:** Maxwell, Iran, Gulf SWFs, Israel, Oracle/Ellison, Epstein Files, Arkansas Datacenter, Religious Layer, Zorro Ranch/NM, April 2026 Window, Cuba Crisis, Capital Architecture (USD1/WLF/MGX)
 
-**Output:** JSON files in `output/` — node_status, extracted_entities, convergence_report, daily_intelligence, live_verification, fact_check, rhetoric_reality. Timestamped copies in `output/history/`.
+**Output:** JSON files in `output/` — node_status, extracted_entities, convergence_report, daily_intelligence, live_verification, fact_check, rhetoric_reality, chart_data. Timestamped copies in `output/history/`.
 
-**Dashboard:** Eight-tab static HTML/CSS/JS at regulatedfriction.me (**Node Status**, **Intelligence**, **Convergence**, **Predictions**, **Entities**, **Charts**, **Rhetoric vs. Reality**, **History**). Chart.js visualizations: Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap. Embedded Gradient AI chatbot with `_AI_CONTEXT_INDEX` knowledge base.
+**Dashboard:** Eight-tab static HTML/CSS/JS at regulatedfriction.me (**Node Status**, **Intelligence**, **Convergence**, **Predictions**, **Entities**, **Charts**, **Rhetoric vs. Reality**, **History**). Chart.js visualizations: Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap. Prediction Tracker displays confirmed and failed predictions publicly. Embedded Gradient AI chatbot with `_AI_CONTEXT_INDEX` knowledge base.
 
 **Workflows:**
 - `run_pipeline.yml` — runs the full pipeline twice daily (08:00 / 20:00 UTC), publishes to dashboard
@@ -73,7 +79,38 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ---
 
-### 3. OSINT_ChatBot
+### 3. DigitalOcean Infrastructure
+
+**Purpose:** Automated data collection and AI chatbot hosting outside of GitHub Actions.
+
+**Deployed services:**
+
+| Service | Function | Schedule |
+|---------|----------|----------|
+| Federal Register Scraper | Scrapes Federal Register for regulatory filings, executive orders, and rule changes relevant to tracked nodes | Automated |
+| DOJ Press Release Scraper | Scrapes Department of Justice press releases for enforcement actions, indictments, and policy announcements | Automated |
+| Gradient AI Chatbot | Chatbot deployed on DigitalOcean with live dashboard context injection — the `_AI_CONTEXT_INDEX` knowledge base is loaded so the chatbot can answer questions about the project's current findings and pipeline outputs | Persistent |
+
+**Note:** Scraper output feeds into the Live_Trackers pipeline. The Gradient AI chatbot is embedded on the regulatedfriction.me dashboard.
+
+---
+
+### 4. Crypto Monitoring Pipeline
+
+**Purpose:** Tracks stablecoin capital flows and regulatory developments related to the USD1/WLF/MGX capital architecture documented in the Regulated Friction Project.
+
+**What it monitors:**
+- USD1 stablecoin market cap and transaction volume
+- World Liberty Financial (WLF) OCC charter application status
+- MGX/Abu Dhabi capital flows through Binance/USD1
+- GENIUS Act and CLARITY Act legislative status
+- Emoluments Clause concerns (Warren/Merkley)
+
+**Output:** Chart.js visualizations integrated into the live dashboard; pipeline JSON outputs feeding convergence detection.
+
+---
+
+### 5. OSINT_ChatBot
 
 **Purpose:** BYOK (Bring Your Own Key) chat interface powered by Anthropic Claude with a knowledge base from `_AI_CONTEXT_INDEX/`.
 
@@ -91,7 +128,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ---
 
-### 4. Bill_Translator
+### 6. Bill_Translator
 
 **Purpose:** Production Flask web application that rewrites dense legal text to meet 8th-grade readability standards while preserving legal intent. Addresses Arkansas Act 602.
 
@@ -116,7 +153,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ---
 
-### 5. State_Policy_Analysis (v1.4)
+### 7. State_Policy_Analysis (v1.4)
 
 **Purpose:** Data-driven analysis of how U.S. states respond to the data center and energy infrastructure boom.
 
@@ -133,7 +170,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ---
 
-### 6. UVB-76-Structured-Signal-Analysis
+### 8. UVB-76-Structured-Signal-Analysis
 
 **Purpose:** 15-year empirical analysis of Russia's UVB-76 ("The Buzzer") shortwave station transmissions (2010–2025).
 
@@ -141,7 +178,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ---
 
-### 7. leerrooy95.github.io
+### 9. leerrooy95.github.io
 
 **Purpose:** Portfolio website.
 
@@ -151,57 +188,85 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ---
 
-### 8. AI-Manipulation-OSINT-Case-Study
+### 10. AI-Manipulation-OSINT-Case-Study
 
 **Purpose:** Quantitative documentation of a 207:1 keyword-frequency disparity across AI platforms with cross-platform verification.
 
 ---
 
-### 9. Sovereign-Capital-Audit
+### 11. Sovereign-Capital-Audit
 
 **Purpose:** Mapping structural dependencies of the US Defense Industrial Base on Gulf Sovereign Wealth (Mubadala/PIF) and East Asian industry. Tracks capital flows, supply chain vulnerabilities, and national security implications.
 
 ---
 
-### 10. Arkansas-Law-Changes-and-AI
+### 12. Arkansas-Law-Changes-and-AI
 
 **Purpose:** Exploring whether Arkansas eliminated 74 years of citizen initiative protections to clear the path for $17+ billion in AI datacenter development.
 
 ---
 
-### 11. Tech_Consolidation_Map
+### 13. Tech_Consolidation_Map
 
 **Purpose:** Tracking data on tech, media, AI, and political consolidation patterns.
 
 ---
 
-### 12. Arkansas-DOC-Expenditures-2015-2025
+### 14. Arkansas-DOC-Expenditures-2015-2025
 
 **Purpose:** OCR'd and aggregated Arkansas Department of Corrections expenditure data from scattered PDFs (2015–2025).
 
 ---
 
-### 13. Arkansas-Department-of-Corrections-2015-2025-Timeline
+### 15. Arkansas-Department-of-Corrections-2015-2025-Timeline
 
 **Purpose:** Timeline visualization of Arkansas Department of Corrections data (Python).
 
 ---
 
-### 14. AR_Economic_Situation
+### 16. AR_Economic_Situation
 
 **Purpose:** Detailed breakdown of Arkansas's economic situation with datasets, data dictionary, sources, and charts.
 
 ---
 
-### 15. Layers_of_Control-From_AI_to_Ellison
+### 17. Layers_of_Control-From_AI_to_Ellison
 
 **Purpose:** OSINT investigation documenting AI engagement manipulation, algorithmic feed control, and Larry Ellison's media consolidation attempts.
 
 ---
 
-### 16. Retaliation-and-Solutions_States-Taking-the-Initiative
+### 18. Retaliation-and-Solutions_States-Taking-the-Initiative
 
 **Purpose:** Documentation of research retaliation cases and what states/counties can do to protect their citizens.
+
+---
+
+## Commercial Product (In Development)
+
+**Product:** Portable intelligence pipeline architecture packaged as a `.tar.xz` file.
+
+**What it includes:** Turnkey setup for an automated OSINT dashboard using the same multi-AI pipeline architecture as Live_Trackers. Minimal configuration — users provide three API keys (two paid services, total operating cost under $5/month) in GitHub secrets and the pipeline runs automatically.
+
+**Status:** Account verification pending on sales platform. Pricing target: $25–$50.
+
+**Note:** Pipeline scripts remain in private repositories. The `.tar.xz` product provides the full pipeline with documentation for independent deployment.
+
+---
+
+## Multi-AI Verification Methodology
+
+A core practice across all projects. No single AI model's output is published without cross-verification.
+
+**Active verification partners:**
+- **Anthropic Claude (Opus 4.6 / Sonnet)** — primary research partner, statistical verification, fact-checking pipeline stage
+- **Perplexity sonar-pro** — real-time news and entity queries with source citations
+- **Meta Llama Scout 17B** — entity extraction and relationship mapping
+- **Google Gemini** — secondary verification partner for cross-checking claims and catching blind spots
+- **xAI Grok** — tertiary verification; documented 207:1 bias disparity (see AI-Manipulation-OSINT-Case-Study)
+- **GitHub Copilot** — repository management, independent verification of claims before commits, code generation
+
+**How it works:** Each model has documented strengths and blind spots. The pipeline routes tasks to the model best suited for them, then cross-checks outputs across at least two models before publication. Hallucinations caught by this process are documented (see the Gemini "Atlantis Today" incident — a fabricated source caught by Claude's physics validation and documented in the Cuba Crisis Escalation file).
 
 ---
 
@@ -211,10 +276,10 @@ A reference for AI assistants and collaborators. Describes every active reposito
 |----------|-------|
 | **Languages** | Python, HTML, CSS, JavaScript |
 | **Web frameworks** | Flask |
-| **AI/LLM APIs** | Anthropic Claude (Sonnet, Opus 4.6), Perplexity sonar-pro, Meta Llama Scout 17B |
-| **Data** | Pandas, Plotly, SciPy, Textstat, DoWhy |
+| **AI/LLM APIs** | Anthropic Claude (Sonnet, Opus 4.6), Perplexity sonar-pro, Meta Llama Scout 17B, Gradient AI, Google Gemini |
+| **Data** | Pandas, Plotly, SciPy, Textstat, DoWhy, Chart.js |
 | **Statistics** | Pearson correlation, Granger causality, permutation testing, bootstrap, ANOVA, Kruskal-Wallis, Mann-Whitney U, chi-square, DoWhy causal inference |
-| **Deployment** | GitHub Pages, Render, GitHub Actions |
+| **Deployment** | GitHub Pages, Render, GitHub Actions, DigitalOcean |
 | **Security** | BYOK model, CSRF, rate limiting, DOMPurify, CSP headers, session encryption |
 
 ---
@@ -233,6 +298,21 @@ GitHub Actions (08:00/20:00 UTC)
   → publish to docs/data/ → regulatedfriction.me
 ```
 
+### DigitalOcean Scrapers
+```
+Automated schedule
+  → Federal Register scraper → structured data
+  → DOJ Press Release scraper → structured data
+  → Output feeds into Live_Trackers pipeline
+```
+
+### Crypto Monitoring
+```
+Pipeline monitors USD1/WLF/MGX capital flows
+  → Chart.js visualizations on dashboard
+  → JSON outputs feed convergence detection
+```
+
 ### Data Sync (The_Regulated_Friction_Project)
 ```
 GitHub Actions (10:00 UTC daily)
@@ -244,6 +324,16 @@ GitHub Actions (10:00 UTC daily)
 ```
 User → Render (Flask) → User provides API key in browser → Server proxies to Anthropic → Response
 Key never stored on disk, only in encrypted session cookie
+```
+
+### Multi-AI Verification Loop
+```
+Research question or claim
+  → Primary model generates output (Claude, Perplexity, or Llama Scout depending on task)
+  → Secondary model cross-checks (different model)
+  → Physics/math/logic validation where applicable
+  → Copilot verifies via independent web search before repo commits
+  → Hallucinations documented when caught
 ```
 
 ---
