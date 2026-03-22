@@ -8,6 +8,8 @@
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=flat&logo=render&logoColor=white)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flat&logo=digitalocean&logoColor=white)
 ![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=flat&logo=chartdotjs&logoColor=white)
+![NetworkX](https://img.shields.io/badge/NetworkX-013243?style=flat&logo=python&logoColor=white)
+![GLiNER2](https://img.shields.io/badge/GLiNER2-Local%20NER%20%7C%20Zero--Cost%20Entity%20Extraction-6B7280?style=flat)
 ![Statistics](https://img.shields.io/badge/Statistics-Correlation%20|%20Permutation%20Testing%20|%20Granger%20Causality-blue)
 
 ## Threat Intelligence Analyst | OSINT & Quantitative Methods
@@ -20,9 +22,9 @@
 
 ### 📌 Featured Projects
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v10.9)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. Processed 8 years of data across 66 verified event pairs. Independently stress-tested by 16 statistical robustness scripts (Opus 4.6). Includes a structured AI context index (12 files + node dossiers tracking 12 active leverage nodes), reproducible correlation scripts, and a 16-section research corpus including a religious infrastructure layer.
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v11.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. Processed 8 years of data across 66 verified event pairs. Independently stress-tested by 16 statistical robustness scripts (Opus 4.6). Includes a structured AI context index (12 files + node dossiers tracking 14 active leverage nodes), reproducible correlation scripts, and a 16-section research corpus including a religious infrastructure layer and an AI kill chain integrity analysis.
 
-The live dashboard at **[regulatedfriction.me](https://regulatedfriction.me)** is powered by a six-stage automated intelligence pipeline running twice daily via GitHub Actions: Perplexity sonar-pro queries leverage node status → Llama Scout 17B extracts entities and relationships → local convergence detection → daily intelligence with signal tracking and prediction verification → Anthropic Claude fact-checks all output → Rhetoric vs. Reality gap analysis with statute citations. The eight-tab dashboard (Node Status, Intelligence, Convergence, Predictions, Entities, Charts, Rhetoric vs. Reality, History) features Chart.js visualizations (Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap), a Prediction Tracker displaying confirmed and failed predictions publicly, and an embedded **Gradient AI chatbot** loaded with the full project knowledge base for interactive queries.
+The live dashboard at **[regulatedfriction.me](https://regulatedfriction.me)** is powered by a seven-stage automated intelligence pipeline running twice daily via GitHub Actions: Perplexity sonar-pro queries leverage node status → dual-engine entity extraction (GLiNER2 local + Llama Scout 17B API) with relation mapping → interactive entity relationship graph generation (NetworkX + PyVis) → local convergence detection → daily intelligence with signal tracking and prediction verification → Anthropic Claude fact-checks all output → Rhetoric vs. Reality gap analysis with statute citations. The nine-tab dashboard (Node Status, Intelligence, Convergence, Predictions, Entities, **Entity Graph**, Charts, Rhetoric vs. Reality, History) features Chart.js visualizations (Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap), an interactive entity relationship graph with cross-node convergence edges, a Prediction Tracker displaying confirmed and failed predictions publicly, and an embedded **Gradient AI chatbot** loaded with the full project knowledge base for interactive queries.
 
 Additional automated infrastructure includes DigitalOcean-hosted scrapers (Federal Register, DOJ press releases) and a crypto monitoring pipeline tracking stablecoin capital flows (USD1/WLF/MGX architecture).
 
@@ -52,7 +54,7 @@ Middle repos taught me the hard way about AI hallucinations. Those repos are cor
 
 Picked up from there by downloading scattered **[Arkansas Department of Corrections](https://github.com/Leerrooy95/Arkansas-DOC-Expenditures-2015-2025)** PDFs, OCR'ing them into clean datasets, and analyzing spending patterns that hadn't been aggregated before.
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** is where methodology caught up with ambition — automated scraping, statistical validation, reproducible findings, and a live intelligence dashboard. Now at v10.9 with 16 independent robustness tests, a structured AI context index tracking 12 active leverage nodes, a research corpus spanning 16 sections (including a religious infrastructure layer), a six-stage pipeline publishing to an eight-tab dashboard at [regulatedfriction.me](https://regulatedfriction.me), and a Gradient AI chatbot for interactive queries against the full knowledge base.
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** is where methodology caught up with ambition — automated scraping, statistical validation, reproducible findings, and a live intelligence dashboard. Now at v11.3 with 16 independent robustness tests, a structured AI context index tracking 14 active leverage nodes, a research corpus spanning 16 sections (including a religious infrastructure layer and an AI kill chain integrity analysis), a seven-stage pipeline publishing to a nine-tab dashboard at [regulatedfriction.me](https://regulatedfriction.me), and a Gradient AI chatbot for interactive queries against the full knowledge base. The pipeline now includes dual-engine entity extraction (GLiNER2 running locally at zero cost alongside Llama Scout 17B) and an auto-generated interactive entity relationship graph that visualizes cross-node convergence in real time.
 
 **[State Policy Analysis](https://github.com/Leerrooy95/State_Policy_Analysis)** applied the same rigor at the state level — tracking data center legislation across 27 states, running causal inference (DoWhy), and transparently correcting three prior findings that turned out to be methodological artifacts.
 
@@ -60,16 +62,17 @@ Picked up from there by downloading scattered **[Arkansas Department of Correcti
 
 **[OSINT ChatBot](https://github.com/Leerrooy95/OSINT_ChatBot)** extended the research into an interactive BYOK chatbot — giving anyone access to query the full knowledge base through Claude, with proper security, rate limiting, and session management.
 
-The common thread across all of it is **multi-AI verification** — using multiple models (Claude, Perplexity, Llama Scout, Gemini, Grok) to cross-check each other's outputs, catch hallucinations, and stress-test claims before anything gets published. Every model has blind spots. The pipeline is designed so no single model's output goes unverified.
+The common thread across all of it is **multi-AI verification** — using multiple models (Claude, Perplexity, Llama Scout, GLiNER2, Gemini, Grok) to cross-check each other's outputs, catch hallucinations, and stress-test claims before anything gets published. Every model has blind spots. The pipeline is designed so no single model's output goes unverified.
 
 ---
 
 ### 🔧 What I Build
 
-- **Automated OSINT pipelines** — multi-agent LLM extraction (Perplexity → Llama Scout → Claude), entity disambiguation, convergence detection, rhetoric vs. reality gap analysis, fact-checking
-- **Multi-AI verification systems** — cross-model validation using Claude, Perplexity, Llama Scout, Gemini, and Grok to catch hallucinations and verify claims before publication
+- **Automated OSINT pipelines** — multi-agent LLM extraction (Perplexity → dual-engine GLiNER2 + Llama Scout → Claude), entity disambiguation, relation extraction, convergence detection, rhetoric vs. reality gap analysis, fact-checking
+- **Multi-AI verification systems** — cross-model validation using Claude, Perplexity, GLiNER2, Llama Scout, Gemini, and Grok to catch hallucinations and verify claims before publication
 - **Temporal correlation frameworks** — lag analysis, permutation testing, Granger causality, convergence modeling, DoWhy causal inference
-- **Live dashboards** — eight-tab HTML/CSS/JS dashboard at regulatedfriction.me with Chart.js visualizations, fed by a six-stage pipeline twice daily via GitHub Actions
+- **Live dashboards** — nine-tab HTML/CSS/JS dashboard at regulatedfriction.me with Chart.js visualizations and an interactive entity relationship graph (NetworkX + PyVis), fed by a seven-stage pipeline twice daily via GitHub Actions
+- **Entity relationship graphs** — auto-generated interactive network visualizations (NetworkX + PyVis) with color-coded entity types, cross-node convergence edges, and physics-based layout — deployed as static HTML to GitHub Pages
 - **AI-powered chatbots** — BYOK Flask apps with knowledge base injection, session security, and rate limiting; Gradient AI chatbot with live dashboard context injection
 - **Automated scrapers** — DigitalOcean-hosted scrapers for Federal Register and DOJ press releases; crypto capital flow monitoring (USD1/WLF/MGX stablecoin architecture)
 - **Civic technology** — Flask web apps with NLP, meaning drift detection, and readability scoring
@@ -96,4 +99,4 @@ I'm preparing a portable version of the intelligence pipeline architecture as a 
 
 ---
 
-**Last Updated:** *March 21, 2026*
+**Last Updated:** *March 22, 2026*
