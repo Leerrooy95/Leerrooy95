@@ -3,7 +3,7 @@
 A reference for AI assistants and collaborators. Describes every active repository, tool, pipeline, and deployment so full context doesn't need to be re-gathered each time.
 
 **Author:** Austin Smith ([@Leerrooy95](https://github.com/Leerrooy95))
-**Last Updated:** March 21, 2026
+**Last Updated:** March 22, 2026
 
 ---
 
@@ -23,14 +23,15 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ## Active Repositories
 
-### 1. The Regulated Friction Project (v10.9)
+### 1. The Regulated Friction Project (v11.3)
 
 **Purpose:** Research-only information repository. Documents temporal correlations between geopolitical friction events and institutional capital flows (2015–2026).
 
 **Key contents:**
 - 16-section research corpus (00_Quick_Breakdowns through 15_The_Religious_Layer)
-- `_AI_CONTEXT_INDEX/` — 12 structured markdown files + Node Dossiers (12 active leverage nodes) used by AI assistants and the OSINT ChatBot
+- `_AI_CONTEXT_INDEX/` — 12 structured markdown files + Node Dossiers (14 active leverage nodes) used by AI assistants and the OSINT ChatBot
 - `15_The_Religious_Layer/` — Religious infrastructure mapping (Paula White, Capitol Ministries, CUFI/Hagee, CREC/Wilson, Hegseth convergence node)
+- `10_Real-Time_Updates_and_Tasks/2026_March/` — April 2026 convergence window prediction, Cuba crisis escalation, Mueller death/leverage signal, Musk empire realignment, AI kill chain / Minab school strike analysis
 - `Project_Trident/` — independent verification suite (16 statistical tests by Opus 4.6)
 - `Run_Correlations_Yourself/` — reproducibility scripts
 - `output/` — daily data synced from Live_Trackers pipeline
@@ -40,40 +41,54 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 **Core statistics:** r = +0.6196 (p = 0.0004), 66 verified event pairs, 7-day median lag
 
-**Active leverage nodes (12):** Maxwell, Iran, Gulf SWFs, Israel, Epstein Files, Oracle/Ellison, Arkansas Datacenter, Religious Layer, April 2026 Convergence Window, Zorro Ranch/NM Investigation (+ 2 additional sub-nodes)
+**Active leverage nodes (14):** Maxwell, Iran, Gulf SWFs, Israel, Epstein Files, Oracle/Ellison, Arkansas Datacenter, Religious Layer, April 2026 Convergence Window, Zorro Ranch/NM Investigation, Cuba Crisis, Musk/SpaceX-xAI Empire Realignment, AI Kill Chain/Minab School Strike, Capital Architecture (USD1/WLF/MGX)
 
 **Note:** The Streamlit dashboard has been retired. All live monitoring is in Live_Trackers (now private). Deprecated files (Streamlit source, Scrapy spider, old workflows) are in `Archive/`.
 
 ---
 
-### 2. Live_Trackers (v2.1) — **Private Repository**
+### 2. Live_Trackers (v2.3) — **Private Repository**
 
 **Purpose:** Unified real-time intelligence pipeline powering the live dashboard at regulatedfriction.me.
 
-**Six-stage pipeline:**
+**Seven-stage pipeline:**
 
 | Stage | Script | AI Model | Function |
 |-------|--------|----------|----------|
 | 1 | `node_tracker.py` | Perplexity sonar-pro | Queries current status of leverage nodes, classifies events |
-| 2 | `entity_extractor.py` | Llama Scout 17B | Extracts entities, relationships, temporal markers from node data |
+| 2 | `entity_extractor.py` | GLiNER2 (local) + Llama Scout 17B (API) | Dual-engine entity extraction and relation mapping. GLiNER2 runs zero-cost on CPU; Llama Scout fills gaps when key is set. Results merged with cross-node connection detection. |
+| 2.5 | `graph_builder.py` | Local (no API) | Reads extracted_entities.json, builds NetworkX graph, renders interactive PyVis HTML visualization to docs/data/entity_graph.html |
 | 3 | `convergence_detector.py` | Local (no API) | Detects multi-node convergence patterns from historical runs |
+| 3.5 | `chart_data_builder.py` | Local (no API) | Aggregates historical run data into chart_data.json |
 | 4 | `daily_intelligence.py` | Perplexity sonar-pro | Tracks signals, scans entities for breaking news, verifies predictions |
 | 5 | `fact_checker.py` | Anthropic Claude Sonnet | Fact-checks all output, corrects errors in-place |
 | 6 | `rhetoric_reality.py` | Anthropic Claude | Three-column gap analysis (rhetoric vs. reality) with statute citations |
 
-**Leverage nodes tracked:** Maxwell, Iran, Gulf SWFs, Israel, Oracle/Ellison, Epstein Files, Arkansas Datacenter, Religious Layer, Zorro Ranch/NM, April 2026 Window, Cuba Crisis, Capital Architecture (USD1/WLF/MGX)
+**GLiNER2 details:**
+- Model: `fastino/gliner2-base-v1` (205M parameters, Apache 2.0)
+- Runs locally on GitHub Actions CPU runner — zero API cost
+- Extracts entity types: person, organization, jurisdiction, capital_flow, date, policy, crypto_asset, leverage_node
+- Performs relation extraction: ownership, investment, conflict, leadership, administrative control, personal guarantee, mediation
+- Zero-cost fallback mode: when `LLAMA_SCOUT_KEY` is not set, pipeline runs GLiNER2-only automatically
+- New CLI flag: `--gliner-only` to force local extraction
+- Cross-node connection detection: automatically identifies shared entities across leverage nodes
 
-**Output:** JSON files in `output/` — node_status, extracted_entities, convergence_report, daily_intelligence, live_verification, fact_check, rhetoric_reality, chart_data. Timestamped copies in `output/history/`.
+**Leverage nodes tracked:** Maxwell, Iran, Gulf SWFs, Israel, Oracle/Ellison, Epstein Files, Arkansas Datacenter, Religious Layer, Zorro Ranch/NM, April 2026 Window, Cuba Crisis, Capital Architecture (USD1/WLF/MGX), Musk/SpaceX-xAI Empire Realignment, AI Kill Chain/Minab School Strike
 
-**Dashboard:** Eight-tab static HTML/CSS/JS at regulatedfriction.me (**Node Status**, **Intelligence**, **Convergence**, **Predictions**, **Entities**, **Charts**, **Rhetoric vs. Reality**, **History**). Chart.js visualizations: Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap. Prediction Tracker displays confirmed and failed predictions publicly. Embedded Gradient AI chatbot with `_AI_CONTEXT_INDEX` knowledge base.
+**Output:** JSON files in `output/` — node_status, extracted_entities, convergence_report, daily_intelligence, live_verification, fact_check, rhetoric_reality, chart_data. Timestamped copies in `output/history/`. Entity graph rendered to `docs/data/entity_graph.html`.
+
+**Dashboard:** Nine-tab static HTML/CSS/JS at regulatedfriction.me (**Node Status**, **Intelligence**, **Convergence**, **Predictions**, **Entities**, **Entity Graph**, **Charts**, **Rhetoric vs. Reality**, **History**). Chart.js visualizations: Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap. Interactive entity relationship graph (NetworkX + PyVis): color-coded by entity type (red=leverage nodes, blue=persons, green=organizations, yellow=locations, purple=financial, orange=legal), sized by connection frequency, dashed yellow convergence edges for cross-node connections. Prediction Tracker displays confirmed and failed predictions publicly. Embedded Gradient AI chatbot with `_AI_CONTEXT_INDEX` knowledge base.
 
 **Workflows:**
-- `run_pipeline.yml` — runs the full pipeline twice daily (08:00 / 20:00 UTC), publishes to dashboard
+- `run_pipeline.yml` — runs the full seven-stage pipeline twice daily (08:00 / 20:00 UTC), publishes to dashboard
 - `deploy.yml` — CI/CD validation on push to main
 
-**API budget:** Node tracker: 50 calls/day. Daily intelligence: 75 calls/day. Llama Scout: 1 call/run. Convergence: no API calls.
+**API budget:** Node tracker: 50 calls/day. Daily intelligence: 75 calls/day. Llama Scout: 1 call/run (optional). GLiNER2: 0 API calls (local). Convergence: no API calls.
 
-**Required secrets:** `PERPLEXITY_API_KEY`, `LLAMA_SCOUT_KEY`, `ANTHROPIC_API_KEY`
+**Required secrets:** `PERPLEXITY_API_KEY`, `ANTHROPIC_API_KEY`
+**Optional secrets:** `LLAMA_SCOUT_KEY` (enables dual-engine mode; GLiNER2-only runs automatically without it)
+
+**Dependencies added (March 22, 2026):** `gliner2`, `networkx`, `pyvis` — all verified no security advisories.
 
 **Note:** This repository is private. The website and pipeline remain active.
 
@@ -246,7 +261,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 **Product:** Portable intelligence pipeline architecture packaged as a `.tar.xz` file.
 
-**What it includes:** Turnkey setup for an automated OSINT dashboard using the same multi-AI pipeline architecture as Live_Trackers. Minimal configuration — users provide three API keys (two paid services, total operating cost under $5/month) in GitHub secrets and the pipeline runs automatically.
+**What it includes:** Turnkey setup for an automated OSINT dashboard using the same multi-AI pipeline architecture as Live_Trackers. Minimal configuration — users provide API keys in GitHub secrets and the pipeline runs automatically. Includes dual-engine entity extraction (GLiNER2 + optional Llama Scout), interactive entity graph, and nine-tab dashboard.
 
 **Status:** Account verification pending on sales platform. Pricing target: $25–$50.
 
@@ -261,7 +276,8 @@ A core practice across all projects. No single AI model's output is published wi
 **Active verification partners:**
 - **Anthropic Claude (Opus 4.6 / Sonnet)** — primary research partner, statistical verification, fact-checking pipeline stage
 - **Perplexity sonar-pro** — real-time news and entity queries with source citations
-- **Meta Llama Scout 17B** — entity extraction and relationship mapping
+- **GLiNER2 (local)** — zero-cost entity extraction and relation mapping; runs on CPU inside GitHub Actions with no API call; zero-cost fallback when Llama Scout key is unavailable
+- **Meta Llama Scout 17B** — entity extraction and relationship mapping; runs in dual-engine mode alongside GLiNER2 when key is set
 - **Google Gemini** — secondary verification partner for cross-checking claims and catching blind spots
 - **xAI Grok** — tertiary verification; documented 207:1 bias disparity (see AI-Manipulation-OSINT-Case-Study)
 - **GitHub Copilot** — repository management, independent verification of claims before commits, code generation
@@ -277,7 +293,9 @@ A core practice across all projects. No single AI model's output is published wi
 | **Languages** | Python, HTML, CSS, JavaScript |
 | **Web frameworks** | Flask |
 | **AI/LLM APIs** | Anthropic Claude (Sonnet, Opus 4.6), Perplexity sonar-pro, Meta Llama Scout 17B, Gradient AI, Google Gemini |
+| **Local AI** | GLiNER2 (fastino/gliner2-base-v1) — NER, relation extraction, text classification; runs on CPU, zero API cost |
 | **Data** | Pandas, Plotly, SciPy, Textstat, DoWhy, Chart.js |
+| **Graph / Visualization** | NetworkX (graph construction + analysis), PyVis (interactive HTML rendering), Chart.js (dashboard charts) |
 | **Statistics** | Pearson correlation, Granger causality, permutation testing, bootstrap, ANOVA, Kruskal-Wallis, Mann-Whitney U, chi-square, DoWhy causal inference |
 | **Deployment** | GitHub Pages, Render, GitHub Actions, DigitalOcean |
 | **Security** | BYOK model, CSRF, rate limiting, DOMPurify, CSP headers, session encryption |
@@ -290,8 +308,10 @@ A core practice across all projects. No single AI model's output is published wi
 ```
 GitHub Actions (08:00/20:00 UTC)
   → node_tracker.py (Perplexity)
-  → entity_extractor.py (Llama Scout 17B)
+  → entity_extractor.py (GLiNER2 local + Llama Scout 17B dual-engine)
+  → graph_builder.py (NetworkX + PyVis → docs/data/entity_graph.html)
   → convergence_detector.py (local)
+  → chart_data_builder.py (local)
   → daily_intelligence.py (Perplexity)
   → fact_checker.py (Anthropic Claude)
   → rhetoric_reality.py (Anthropic Claude)
@@ -329,11 +349,24 @@ Key never stored on disk, only in encrypted session cookie
 ### Multi-AI Verification Loop
 ```
 Research question or claim
-  → Primary model generates output (Claude, Perplexity, or Llama Scout depending on task)
+  → Primary model generates output (Claude, Perplexity, or GLiNER2/Llama Scout depending on task)
   → Secondary model cross-checks (different model)
   → Physics/math/logic validation where applicable
   → Copilot verifies via independent web search before repo commits
   → Hallucinations documented when caught
+```
+
+### Entity Graph Generation (Stage 2.5)
+```
+entity_extractor.py outputs extracted_entities.json
+  → graph_builder.py reads extracted_entities.json
+  → NetworkX builds directed graph (leverage nodes as hubs, entities as leaves)
+  → GLiNER2 relation edges added (ownership, investment, conflict, etc.)
+  → Cross-node convergence edges added as dashed yellow (HIGH/MEDIUM severity)
+  → Performance guard prunes to top 50 nodes by degree (leverage nodes always retained)
+  → PyVis renders to docs/data/entity_graph.html (dark theme, color-coded, physics layout)
+  → GitHub Actions commits entity_graph.html to docs/data/
+  → GitHub Pages serves at regulatedfriction.me (Entity Graph tab)
 ```
 
 ---
