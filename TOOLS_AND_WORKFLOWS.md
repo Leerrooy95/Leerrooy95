@@ -3,7 +3,7 @@
 A reference for AI assistants and collaborators. Describes every active repository, tool, pipeline, and deployment so full context doesn't need to be re-gathered each time.
 
 **Author:** Austin Smith ([@Leerrooy95](https://github.com/Leerrooy95))
-**Last Updated:** March 22, 2026
+**Last Updated:** March 31, 2026
 
 ---
 
@@ -47,7 +47,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ---
 
-### 2. Live_Trackers (v2.3) — **Private Repository**
+### 2. Live_Trackers (v2.4) — **Private Repository**
 
 **Purpose:** Unified real-time intelligence pipeline powering the live dashboard at regulatedfriction.me.
 
@@ -55,13 +55,13 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 | Stage | Script | AI Model | Function |
 |-------|--------|----------|----------|
-| 1 | `node_tracker.py` | Perplexity sonar-pro | Queries current status of leverage nodes, classifies events |
+| 1 | `node_tracker.py` | Brave Search + Anthropic Claude | Queries current status of leverage nodes via web search, classifies events with LLM analysis. Includes regulatory capture and revolving door detection. |
 | 2 | `entity_extractor.py` | GLiNER2 (local) + Llama Scout 17B (API) | Dual-engine entity extraction and relation mapping. GLiNER2 runs zero-cost on CPU; Llama Scout fills gaps when key is set. Results merged with cross-node connection detection. |
 | 2.5 | `graph_builder.py` | Local (no API) | Reads extracted_entities.json, builds NetworkX graph, renders interactive PyVis HTML visualization to docs/data/entity_graph.html |
 | 3 | `convergence_detector.py` | Local (no API) | Detects multi-node convergence patterns from historical runs |
 | 3.5 | `chart_data_builder.py` | Local (no API) | Aggregates historical run data into chart_data.json |
-| 4 | `daily_intelligence.py` | Perplexity sonar-pro | Tracks signals, scans entities for breaking news, verifies predictions |
-| 5 | `fact_checker.py` | Anthropic Claude Sonnet | Fact-checks all output, corrects errors in-place |
+| 4 | `daily_intelligence.py` | Brave Search + Anthropic Claude | Three-pass investigation protocol (signal sweep, cross-node scan, under-radar probe). Tracks signals, breaking news, prediction verification. |
+| 5 | `fact_checker.py` | Brave Search + Anthropic Claude | Web-grounded fact verification — searches Brave for live evidence, then Claude verifies claims against both web results and training knowledge. Corrects errors in-place. |
 | 6 | `rhetoric_reality.py` | Anthropic Claude | Three-column gap analysis (rhetoric vs. reality) with statute citations |
 
 **GLiNER2 details:**
@@ -83,12 +83,14 @@ A reference for AI assistants and collaborators. Describes every active reposito
 - `run_pipeline.yml` — runs the full seven-stage pipeline twice daily (08:00 / 20:00 UTC), publishes to dashboard
 - `deploy.yml` — CI/CD validation on push to main
 
-**API budget:** Node tracker: 50 calls/day. Daily intelligence: 75 calls/day. Llama Scout: 1 call/run (optional). GLiNER2: 0 API calls (local). Convergence: no API calls.
+**API budget:** Node tracker: 50 calls/day. Daily intelligence: 100 calls/day. Llama Scout: 1 call/run (optional). GLiNER2: 0 API calls (local). Convergence: no API calls.
 
-**Required secrets:** `PERPLEXITY_API_KEY`, `ANTHROPIC_API_KEY`
+**Required secrets:** `BRAVE_API_KEY`, `ANTHROPIC_API_KEY`
 **Optional secrets:** `LLAMA_SCOUT_KEY` (enables dual-engine mode; GLiNER2-only runs automatically without it)
 
 **Dependencies added (March 22, 2026):** `gliner2`, `networkx`, `pyvis` — all verified no security advisories.
+
+**Migration (March 31, 2026):** Perplexity sonar-pro replaced with Brave Search API + Anthropic Claude across Stages 1, 4, and 5. `openai` and `azure-ai-inference` packages removed from requirements. Web-grounded fact verification added to Stage 5. Regulatory capture detection added to node tracker prompts. Daily intelligence API budget increased from 75 to 100.
 
 **Note:** This repository is private. The website and pipeline remain active.
 
@@ -261,9 +263,9 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 **Product:** Portable intelligence pipeline architecture packaged as a `.tar.xz` file.
 
-**What it includes:** Turnkey setup for an automated OSINT dashboard using the same multi-AI pipeline architecture as Live_Trackers. Minimal configuration — users provide API keys in GitHub secrets and the pipeline runs automatically. Includes dual-engine entity extraction (GLiNER2 + optional Llama Scout), interactive entity graph, and nine-tab dashboard.
+**Store:** [store.regulatedfriction.me](https://store.regulatedfriction.me) — $50 one-time purchase (account verification pending).
 
-**Status:** Account verification pending on sales platform. Pricing target: $25–$50.
+**What it includes:** Turnkey setup for an automated OSINT dashboard using the same multi-AI pipeline architecture as Live_Trackers. Minimal configuration — users provide API keys (Brave Search + Anthropic) in GitHub secrets and the pipeline runs automatically. Includes web-grounded fact verification, regulatory capture detection, dual-engine entity extraction (GLiNER2 + optional Llama Scout), interactive entity graph, and nine-tab dashboard. Operating cost under $10/month.
 
 **Note:** Pipeline scripts remain in private repositories. The `.tar.xz` product provides the full pipeline with documentation for independent deployment.
 
@@ -275,7 +277,7 @@ A core practice across all projects. No single AI model's output is published wi
 
 **Active verification partners:**
 - **Anthropic Claude (Opus 4.6 / Sonnet)** — primary research partner, statistical verification, fact-checking pipeline stage
-- **Perplexity sonar-pro** — real-time news and entity queries with source citations
+- **Brave Search API** — real-time web search for node tracking, daily intelligence, and fact-check verification. Replaced Perplexity sonar-pro in March 2026.
 - **GLiNER2 (local)** — zero-cost entity extraction and relation mapping; runs on CPU inside GitHub Actions with no API call; zero-cost fallback when Llama Scout key is unavailable
 - **Meta Llama Scout 17B** — entity extraction and relationship mapping; runs in dual-engine mode alongside GLiNER2 when key is set
 - **Google Gemini** — secondary verification partner for cross-checking claims and catching blind spots
@@ -292,7 +294,7 @@ A core practice across all projects. No single AI model's output is published wi
 |----------|-------|
 | **Languages** | Python, HTML, CSS, JavaScript |
 | **Web frameworks** | Flask |
-| **AI/LLM APIs** | Anthropic Claude (Sonnet, Opus 4.6), Perplexity sonar-pro, Meta Llama Scout 17B, Gradient AI, Google Gemini |
+| **AI/LLM APIs** | Anthropic Claude (Sonnet, Opus 4.6), Brave Search API, Meta Llama Scout 17B, Gradient AI, Google Gemini |
 | **Local AI** | GLiNER2 (fastino/gliner2-base-v1) — NER, relation extraction, text classification; runs on CPU, zero API cost |
 | **Data** | Pandas, Plotly, SciPy, Textstat, DoWhy, Chart.js |
 | **Graph / Visualization** | NetworkX (graph construction + analysis), PyVis (interactive HTML rendering), Chart.js (dashboard charts) |
@@ -307,13 +309,13 @@ A core practice across all projects. No single AI model's output is published wi
 ### Automated Intelligence Pipeline (Live_Trackers — private)
 ```
 GitHub Actions (08:00/20:00 UTC)
-  → node_tracker.py (Perplexity)
+  → node_tracker.py (Brave Search + Claude)
   → entity_extractor.py (GLiNER2 local + Llama Scout 17B dual-engine)
   → graph_builder.py (NetworkX + PyVis → docs/data/entity_graph.html)
   → convergence_detector.py (local)
   → chart_data_builder.py (local)
-  → daily_intelligence.py (Perplexity)
-  → fact_checker.py (Anthropic Claude)
+  → daily_intelligence.py (Brave Search + Claude)
+  → fact_checker.py (Brave Search + Anthropic Claude)
   → rhetoric_reality.py (Anthropic Claude)
   → publish to docs/data/ → regulatedfriction.me
 ```
@@ -349,7 +351,7 @@ Key never stored on disk, only in encrypted session cookie
 ### Multi-AI Verification Loop
 ```
 Research question or claim
-  → Primary model generates output (Claude, Perplexity, or GLiNER2/Llama Scout depending on task)
+  → Primary model generates output (Claude, Brave Search + Claude, or GLiNER2/Llama Scout depending on task)
   → Secondary model cross-checks (different model)
   → Physics/math/logic validation where applicable
   → Copilot verifies via independent web search before repo commits
@@ -365,17 +367,4 @@ entity_extractor.py outputs extracted_entities.json
   → Cross-node convergence edges added as dashed yellow (HIGH/MEDIUM severity)
   → Performance guard prunes to top 50 nodes by degree (leverage nodes always retained)
   → PyVis renders to docs/data/entity_graph.html (dark theme, color-coded, physics layout)
-  → GitHub Actions commits entity_graph.html to docs/data/
-  → GitHub Pages serves at regulatedfriction.me (Entity Graph tab)
-```
-
----
-
-## Ignored / Archived Repositories
-
-- **Project_Chrysanthemum** — Japan-China tech integration analysis. Data confidence is low (early learning project); excluded from profile.
-- **DOGE_Global_Effects / BRICS-NDB-LocalCurrency-DiD** — Retracted due to Grok-fabricated data. Documented in The_Regulated_Friction_Project `Archive/Retracted_Three_Layer_References.md`.
-
----
-
-*This file exists so AI assistants and collaborators can quickly understand the full project ecosystem without re-gathering context from each repository.*
+  
