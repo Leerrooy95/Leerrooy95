@@ -3,6 +3,7 @@
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
 ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white)
 ![Anthropic](https://img.shields.io/badge/Anthropic_API-191919?style=flat&logo=anthropic&logoColor=white)
+![Brave Search](https://img.shields.io/badge/Brave_Search_API-FB542B?style=flat&logo=brave&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
 ![HTML/CSS/JS](https://img.shields.io/badge/HTML%2FCSS%2FJS-E34F26?style=flat&logo=html5&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=flat&logo=render&logoColor=white)
@@ -24,7 +25,7 @@
 
 **[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v11.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. Processed 8 years of data across 66 verified event pairs. Independently stress-tested by 16 statistical robustness scripts (Opus 4.6). Includes a structured AI context index (12 files + node dossiers tracking 14 active leverage nodes), reproducible correlation scripts, and a 16-section research corpus including a religious infrastructure layer and an AI kill chain integrity analysis.
 
-The live dashboard at **[regulatedfriction.me](https://regulatedfriction.me)** is powered by a seven-stage automated intelligence pipeline running twice daily via GitHub Actions: Perplexity sonar-pro queries leverage node status → dual-engine entity extraction (GLiNER2 local + Llama Scout 17B API) with relation mapping → interactive entity relationship graph generation (NetworkX + PyVis) → local convergence detection → daily intelligence with signal tracking and prediction verification → Anthropic Claude fact-checks all output → Rhetoric vs. Reality gap analysis with statute citations. The nine-tab dashboard (Node Status, Intelligence, Convergence, Predictions, Entities, **Entity Graph**, Charts, Rhetoric vs. Reality, History) features Chart.js visualizations (Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap), an interactive entity relationship graph with cross-node convergence edges, a Prediction Tracker displaying confirmed and failed predictions publicly, and an embedded **Gradient AI chatbot** loaded with the full project knowledge base for interactive queries.
+The live dashboard at **[regulatedfriction.me](https://regulatedfriction.me)** is powered by a seven-stage automated intelligence pipeline running twice daily via GitHub Actions: Brave Search + Claude queries leverage node status → dual-engine entity extraction (GLiNER2 local + Llama Scout 17B API) with relation mapping → interactive entity relationship graph generation (NetworkX + PyVis) → local convergence detection → daily intelligence with signal tracking and prediction verification → Anthropic Claude fact-checks all output → Rhetoric vs. Reality gap analysis with statute citations. The nine-tab dashboard (Node Status, Intelligence, Convergence, Predictions, Entities, **Entity Graph**, Charts, Rhetoric vs. Reality, History) features Chart.js visualizations (Thermostat Timeline, Dual-Track Stacked Area, Node Activation Heatmap), an interactive entity relationship graph with cross-node convergence edges, a Prediction Tracker displaying confirmed and failed predictions publicly, and an embedded **Gradient AI chatbot** loaded with the full project knowledge base for interactive queries.
 
 Additional automated infrastructure includes DigitalOcean-hosted scrapers (Federal Register, DOJ press releases) and a crypto monitoring pipeline tracking stablecoin capital flows (USD1/WLF/MGX architecture).
 
@@ -62,14 +63,14 @@ Picked up from there by downloading scattered **[Arkansas Department of Correcti
 
 **[OSINT ChatBot](https://github.com/Leerrooy95/OSINT_ChatBot)** extended the research into an interactive BYOK chatbot — giving anyone access to query the full knowledge base through Claude, with proper security, rate limiting, and session management.
 
-The common thread across all of it is **multi-AI verification** — using multiple models (Claude, Perplexity, Llama Scout, GLiNER2, Gemini, Grok) to cross-check each other's outputs, catch hallucinations, and stress-test claims before anything gets published. Every model has blind spots. The pipeline is designed so no single model's output goes unverified.
+The common thread across all of it is **multi-AI verification** — using multiple models (Claude, Brave Search, Llama Scout, GLiNER2, Gemini, Grok) to cross-check each other's outputs, catch hallucinations, and stress-test claims before anything gets published. Every model has blind spots. The pipeline is designed so no single model's output goes unverified.
 
 ---
 
 ### 🔧 What I Build
 
-- **Automated OSINT pipelines** — multi-agent LLM extraction (Perplexity → dual-engine GLiNER2 + Llama Scout → Claude), entity disambiguation, relation extraction, convergence detection, rhetoric vs. reality gap analysis, fact-checking
-- **Multi-AI verification systems** — cross-model validation using Claude, Perplexity, GLiNER2, Llama Scout, Gemini, and Grok to catch hallucinations and verify claims before publication
+- **Automated OSINT pipelines** — multi-agent LLM extraction (Brave Search + Claude → dual-engine GLiNER2 + Llama Scout → Claude fact-check), entity disambiguation, relation extraction, convergence detection, rhetoric vs. reality gap analysis, fact-checking
+- **Multi-AI verification systems** — cross-model validation using Claude, Brave Search, GLiNER2, Llama Scout, Gemini, and Grok to catch hallucinations and verify claims before publication
 - **Temporal correlation frameworks** — lag analysis, permutation testing, Granger causality, convergence modeling, DoWhy causal inference
 - **Live dashboards** — nine-tab HTML/CSS/JS dashboard at regulatedfriction.me with Chart.js visualizations and an interactive entity relationship graph (NetworkX + PyVis), fed by a seven-stage pipeline twice daily via GitHub Actions
 - **Entity relationship graphs** — auto-generated interactive network visualizations (NetworkX + PyVis) with color-coded entity types, cross-node convergence edges, and physics-based layout — deployed as static HTML to GitHub Pages
@@ -83,7 +84,7 @@ The common thread across all of it is **multi-AI verification** — using multip
 
 ### 💼 Commercial Product
 
-I'm preparing a portable version of the intelligence pipeline architecture as a `.tar.xz` package — a turnkey setup requiring only three API keys (two paid, total operating cost under $5/month) with minimal configuration on the user's end. Sales platform and pricing to be announced once account verification is complete.
+The portable version of the intelligence pipeline architecture is available as a `.tar.xz` package at **[store.regulatedfriction.me](https://store.regulatedfriction.me)** — $50 one-time purchase. Turnkey setup requiring three API keys (Brave Search + Anthropic, total operating cost under $10/month). Includes web-grounded fact verification, regulatory capture detection, and nine-tab dashboard. Account verification pending.
 
 ---
 
@@ -99,4 +100,4 @@ I'm preparing a portable version of the intelligence pipeline architecture as a 
 
 ---
 
-**Last Updated:** *March 22, 2026*
+**Last Updated:** *March 31, 2026*
