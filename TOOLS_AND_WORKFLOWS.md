@@ -357,14 +357,3 @@ Research question or claim
   → Copilot verifies via independent web search before repo commits
   → Hallucinations documented when caught
 ```
-
-### Entity Graph Generation (Stage 2.5)
-```
-entity_extractor.py outputs extracted_entities.json
-  → graph_builder.py reads extracted_entities.json
-  → NetworkX builds directed graph (leverage nodes as hubs, entities as leaves)
-  → GLiNER2 relation edges added (ownership, investment, conflict, etc.)
-  → Cross-node convergence edges added as dashed yellow (HIGH/MEDIUM severity)
-  → Performance guard prunes to top 50 nodes by degree (leverage nodes always retained)
-  → PyVis renders to docs/data/entity_graph.html (dark theme, color-coded, physics layout)
-  
