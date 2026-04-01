@@ -3,7 +3,7 @@
 A reference for AI assistants and collaborators. Describes every active repository, tool, pipeline, and deployment so full context doesn't need to be re-gathered each time.
 
 **Author:** Austin Smith ([@Leerrooy95](https://github.com/Leerrooy95))
-**Last Updated:** March 31, 2026
+**Last Updated:** April 1, 2026
 
 ---
 
@@ -12,6 +12,8 @@ A reference for AI assistants and collaborators. Describes every active reposito
 | Service | URL | Hosted On | Source Repo |
 |---------|-----|-----------|-------------|
 | Live Intelligence Dashboard | [regulatedfriction.me](https://regulatedfriction.me) | GitHub Pages (Live_Trackers, private) | — |
+| Product Store (Creem) | [store.regulatedfriction.me](https://store.regulatedfriction.me) | Creem | — |
+| Product Store (Gumroad) | [leroyswebdevelopment.tech](https://leroyswebdevelopment.tech/) | Gumroad | — |
 | Gradient AI Chatbot | Embedded on regulatedfriction.me | Gradient AI (DigitalOcean) | — |
 | Federal Register Scraper | Automated | DigitalOcean | Private |
 | DOJ Press Release Scraper | Automated | DigitalOcean | Private |
@@ -259,15 +261,50 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ---
 
-## Commercial Product (In Development)
+## Commercial Product — OSINT Intelligence Pipeline
 
-**Product:** Portable intelligence pipeline architecture packaged as a `.tar.xz` file.
+**Product:** `leroyswebdevelopment.tar.xz` — complete, production-ready intelligence pipeline (34 files) packaged for independent deployment.
 
-**Store:** [store.regulatedfriction.me](https://store.regulatedfriction.me) — $50 one-time purchase (account verification pending).
+**Price:** $50 one-time purchase · Under $10/month to operate (API costs)
 
-**What it includes:** Turnkey setup for an automated OSINT dashboard using the same multi-AI pipeline architecture as Live_Trackers. Minimal configuration — users provide API keys (Brave Search + Anthropic) in GitHub secrets and the pipeline runs automatically. Includes web-grounded fact verification, regulatory capture detection, dual-engine entity extraction (GLiNER2 + optional Llama Scout), interactive entity graph, and nine-tab dashboard. Operating cost under $10/month.
+**Stores:**
+- **Creem:** [store.regulatedfriction.me](https://store.regulatedfriction.me)
+- **Gumroad:** [leroyswebdevelopment.tech](https://leroyswebdevelopment.tech/)
 
-**Note:** Pipeline scripts remain in private repositories. The `.tar.xz` product provides the full pipeline with documentation for independent deployment.
+**What it includes:**
+- 11 Python scripts (10 pipeline stages + knowledge-base sync utility)
+- 3 GitHub Actions workflows (scheduled pipeline, push validation, knowledge base sync)
+- Nine-tab static HTML dashboard (reads JSON in-browser, no backend)
+- Unified JSON config — define nodes, signals, entities, disambiguation rules, standing corrections
+- Shell runner with `--dry-run` support for local development
+- Full documentation (setup guide, secrets reference, architecture walkthrough, troubleshooting)
+- Built-in daily API budget trackers (50/day node tracking, 100/day intelligence)
+
+**Ten-stage pipeline** (expanded from the seven-stage Live_Trackers architecture):
+
+| Stage | Function |
+|-------|----------|
+| 1 | Node Tracking — Brave Search + Claude classification with regulatory capture detection |
+| 2 | Entity Extraction — GLiNER2 (local, zero-cost) + Llama Scout 17B (GitHub Models API) with automatic fallback |
+| 3 | Convergence Detection — multi-node activity windows, friction↔compliance pair identification |
+| 4 | Daily Intelligence — three-pass protocol (signal sweep, cross-node scan, under-radar probe) with prediction tracking |
+| 5 | Fact Verification — Brave Search web evidence + Claude cross-reference, in-place corrections |
+| 6 | Rhetoric vs. Reality — three-column gap analysis with statute citations and confidence levels |
+| 6.5 | Knowledge Base Builder — structured AI context files for chatbot integration |
+| 7 | Validation — cross-stage consistency checks (non-blocking) |
+| 7.5 | Chart Data — aggregates run history into chart-ready JSON |
+| 8 | Interactive Entity Graph — directed NetworkX + PyVis HTML visualization |
+
+**Setup time:** Under 15 minutes. Extract archive → push to GitHub → add `BRAVE_API_KEY` and `ANTHROPIC_API_KEY` secrets → enable GitHub Pages → run once. No servers, no Docker, no databases.
+
+**Required secrets:** `BRAVE_API_KEY`, `ANTHROPIC_API_KEY`
+**Optional secrets:** `LLAMA_SCOUT_KEY` (enables dual-engine extraction; GLiNER2-only runs automatically without it)
+
+**Live demo:** The pipeline runs in production at [regulatedfriction.me](https://regulatedfriction.me).
+
+**Full product description:** See [Product_Description.md](./Product_Description.md) in this repository.
+
+**Support:** austin@dvmgservices.com
 
 ---
 
