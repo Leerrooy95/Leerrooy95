@@ -18,9 +18,9 @@
 
 ### 📌 Featured Projects
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v11.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. 8 years of data, 66 verified event pairs, 16 independent robustness tests (Opus 4.6). Includes a structured AI context index tracking 14 active leverage nodes and reproducible correlation scripts.
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v12.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. 8 years of data, 66 verified event pairs, 16 independent robustness tests (Opus 4.6). Includes a structured AI context index tracking 15 active leverage nodes and reproducible correlation scripts.
 
-The live dashboard at **[regulatedfriction.me](https://regulatedfriction.me)** runs a seven-stage automated pipeline twice daily via GitHub Actions — from Brave Search + Claude node tracking through dual-engine entity extraction (GLiNER2 + Llama Scout 17B), convergence detection, daily intelligence, fact verification, and rhetoric vs. reality gap analysis. Nine-tab dashboard with Chart.js visualizations, interactive entity relationship graph (NetworkX + PyVis), public prediction tracker, and an embedded Gradient AI chatbot.
+The automated pipeline at **[regulatedfriction.me](https://regulatedfriction.me)** has been paused to reduce API costs. Daily intelligence updates are now published to [`DAILY_REPORTS/`](https://github.com/Leerrooy95/The_Regulated_Friction_Project/tree/main/DAILY_REPORTS) once a day — Claude reads the full `_AI_CONTEXT_INDEX` knowledge base and generates a plain-language intelligence summary. The nine-tab dashboard remains available as a static archive with Chart.js visualizations, interactive entity relationship graph (NetworkX + PyVis), and public prediction tracker.
 
 | Finding | Value |
 |---------|-------|
@@ -85,4 +85,4 @@ The same pipeline architecture behind [regulatedfriction.me](https://regulatedfr
 
 ---
 
-**Last Updated:** *April 1, 2026*
+**Last Updated:** *April 8, 2026*
