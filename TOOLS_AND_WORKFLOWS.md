@@ -3,7 +3,7 @@
 A reference for AI assistants and collaborators. Describes every active repository, tool, pipeline, and deployment so full context doesn't need to be re-gathered each time.
 
 **Author:** Austin Smith ([@Leerrooy95](https://github.com/Leerrooy95))
-**Last Updated:** April 1, 2026
+**Last Updated:** April 8, 2026
 
 ---
 
@@ -25,13 +25,13 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ## Active Repositories
 
-### 1. The Regulated Friction Project (v11.3)
+### 1. The Regulated Friction Project (v12.3)
 
 **Purpose:** Research-only information repository. Documents temporal correlations between geopolitical friction events and institutional capital flows (2015–2026).
 
 **Key contents:**
 - 16-section research corpus (00_Quick_Breakdowns through 15_The_Religious_Layer)
-- `_AI_CONTEXT_INDEX/` — 12 structured markdown files + Node Dossiers (14 active leverage nodes) used by AI assistants and the OSINT ChatBot
+- `_AI_CONTEXT_INDEX/` — 12 structured markdown files + Node Dossiers (15 active leverage nodes) used by AI assistants and the OSINT ChatBot
 - `15_The_Religious_Layer/` — Religious infrastructure mapping (Paula White, Capitol Ministries, CUFI/Hagee, CREC/Wilson, Hegseth convergence node)
 - `10_Real-Time_Updates_and_Tasks/2026_March/` — April 2026 convergence window prediction, Cuba crisis escalation, Mueller death/leverage signal, Musk empire realignment, AI kill chain / Minab school strike analysis
 - `Project_Trident/` — independent verification suite (16 statistical tests by Opus 4.6)
@@ -43,15 +43,17 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 **Core statistics:** r = +0.6196 (p = 0.0004), 66 verified event pairs, 7-day median lag
 
-**Active leverage nodes (14):** Maxwell, Iran, Gulf SWFs, Israel, Epstein Files, Oracle/Ellison, Arkansas Datacenter, Religious Layer, April 2026 Convergence Window, Zorro Ranch/NM Investigation, Cuba Crisis, Musk/SpaceX-xAI Empire Realignment, AI Kill Chain/Minab School Strike, Capital Architecture (USD1/WLF/MGX)
+**Active leverage nodes (15):** Maxwell, Iran, Gulf SWFs, Israel, Epstein Files, Oracle/Ellison, Arkansas Datacenter, Religious Layer, April 2026 Convergence Window, Zorro Ranch/NM Investigation, Cuba Crisis, Musk/SpaceX-xAI Empire Realignment, AI Kill Chain/Minab School Strike, Capital Architecture (USD1/WLF/MGX), Planet Labs Imagery Blackout
 
-**Note:** The Streamlit dashboard has been retired. All live monitoring is in Live_Trackers (now private). Deprecated files (Streamlit source, Scrapy spider, old workflows) are in `Archive/`.
+**Note:** The Streamlit dashboard has been retired. The automated Live_Trackers pipeline is paused to reduce API costs. Daily intelligence updates are published to `DAILY_REPORTS/` via the manual AI workflow (see below). Deprecated files (Streamlit source, Scrapy spider, old workflows) are in `Archive/`.
 
 ---
 
-### 2. Live_Trackers (v2.4) — **Private Repository**
+### 2. Live_Trackers (v2.4) — **Private Repository** *(Pipeline Paused)*
 
 **Purpose:** Unified real-time intelligence pipeline powering the live dashboard at regulatedfriction.me.
+
+**Status (April 2026):** The automated twice-daily pipeline has been paused to reduce API costs. The nine-tab dashboard at regulatedfriction.me remains available as a static archive. Daily intelligence updates are now published manually to `DAILY_REPORTS/` in The_Regulated_Friction_Project (see DAILY_REPORTS workflow below).
 
 **Seven-stage pipeline:**
 
@@ -94,7 +96,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 **Migration (March 31, 2026):** Perplexity sonar-pro replaced with Brave Search API + Anthropic Claude across Stages 1, 4, and 5. `openai` and `azure-ai-inference` packages removed from requirements. Web-grounded fact verification added to Stage 5. Regulatory capture detection added to node tracker prompts. Daily intelligence API budget increased from 75 to 100.
 
-**Note:** This repository is private. The website and pipeline remain active.
+**Note:** This repository is private. The dashboard remains available as a static archive. The automated pipeline is paused to reduce API costs.
 
 ---
 
@@ -377,6 +379,15 @@ Pipeline monitors USD1/WLF/MGX capital flows
 GitHub Actions (10:00 UTC daily)
   → sync_from_live_trackers.yml
   → pulls output/ from Live_Trackers into The_Regulated_Friction_Project/output/
+```
+*(Note: This sync workflow is paused while the Live_Trackers pipeline is inactive.)*
+
+### DAILY_REPORTS (The_Regulated_Friction_Project — Active)
+```
+Once daily (manual)
+  → Claude reads full _AI_CONTEXT_INDEX/ knowledge base
+  → Generates plain-language intelligence summary
+  → Published to DAILY_REPORTS/ in The_Regulated_Friction_Project
 ```
 
 ### BYOK Web Apps (OSINT_ChatBot, Bill_Translator)
