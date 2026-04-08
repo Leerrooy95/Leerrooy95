@@ -263,6 +263,46 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 ---
 
+### 19. Friction_Breaker
+
+**Purpose:** Open-source mechanism classifier and countermeasure engine. Identifies legal, regulatory, and procedural mechanisms used to bypass democratic accountability, then generates ranked countermeasures that citizens, legislators, and courts can implement.
+
+**Stack:** Python, Flask, GLiNER2 (local NER), Anthropic Claude API (BYOK), Mechanism Taxonomy JSON
+
+**How it works:**
+1. User pastes text (news article, executive order, bill text, regulatory filing, etc.) — or passes a URL or CLI argument
+2. **GLiNER2** extracts entities locally (205M params, Apache 2.0, zero-cost, runs on CPU)
+3. **Mechanism Classifier** matches entities against a taxonomy of **54 documented mechanisms** across **8 categories** extracted from The Regulated Friction Project
+4. **Claude API** (user's own key) generates a countermeasure analysis report — ranked by durability (hardest to reverse first) — in plain English at 8th-grade reading level
+
+**Output includes:**
+- Which mechanisms are in play and how they work
+- Specific countermeasures per mechanism, ranked by durability
+- Who can act: citizens, state legislatures, Congress, or courts
+- Plain-English summary at 8th-grade reading level
+
+**Mechanism taxonomy structure:**
+
+| Field | Description |
+|-------|-------------|
+| ID | Unique identifier (e.g., A-01) |
+| Category | Legislative Architecture, Regulatory Capture, Personnel Cycling, etc. |
+| Durability | 1–10 score (resistance to reversal) |
+| Reversal Pathways | Specific countermeasures ranked by durability |
+| Real Examples | Verified instances from the research |
+
+**8 categories, 54 mechanisms.** See [`MECHANISM_CLASSIFIER_README.md`](https://github.com/Leerrooy95/Friction_Breaker/blob/main/MECHANISM_CLASSIFIER_README.md) for full taxonomy documentation.
+
+**Security:** BYOK — API key never stored or logged; in the web UI it stays in the browser and is sent directly to Anthropic per-request. No data persistence. SSRF protection on URL fetching. GLiNER2 runs entirely locally.
+
+**CI:** GitHub Actions — lint (ruff), pytest across Python 3.10–3.13, pip-audit security scan. Dependabot monitors pip and Actions dependencies weekly.
+
+**Deployment:** Local (localhost:5000) or any server running Python ≥ 3.10. No external infrastructure required.
+
+**License:** MIT
+
+---
+
 ## Commercial Product — OSINT Intelligence Pipeline
 
 **Product:** `leroyswebdevelopment.tar.xz` — complete, production-ready intelligence pipeline (34 files) packaged for independent deployment.

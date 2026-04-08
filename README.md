@@ -30,6 +30,8 @@ The automated pipeline at **[regulatedfriction.me](https://regulatedfriction.me)
 | Independent verification | 16 statistical tests by Opus 4.6 — all passed |
 | Predictions | Falsifiable predictions tracked publicly — failures documented alongside confirmations |
 
+**[Friction Breaker](https://github.com/Leerrooy95/Friction_Breaker)** — Open-source mechanism classifier and countermeasure engine. Paste any news article, executive order, or legislative text: GLiNER2 extracts entities locally (zero-cost), the classifier matches them against a taxonomy of **54 documented accountability-bypassing mechanisms** across 8 categories (derived from The Regulated Friction Project), and Claude generates ranked countermeasures — hardest to reverse first — in plain English anyone can read. BYOK. No data stored server-side.
+
 **[OSINT ChatBot](https://github.com/Leerrooy95/OSINT_ChatBot)** — BYOK Flask chatbot on Render. Users supply their own Anthropic API key (never stored server-side). Knowledge base injected from `_AI_CONTEXT_INDEX/` at startup. Rate limiting, CSRF protection, DOMPurify sanitization, full security headers.
 
 **[Bill Translator](https://github.com/Leerrooy95/Bill_Translator)** — Flask app that rewrites dense legal text to 8th-grade readability while preserving legal intent. Built for Arkansas Act 602. Meaning drift detection, three translation modes, automated Flesch-Kincaid scoring, 31 tests. Deployed on Render.
@@ -46,7 +48,7 @@ The automated pipeline at **[regulatedfriction.me](https://regulatedfriction.me)
 - **Multi-AI verification systems** — cross-model validation (Claude, Brave Search, GLiNER2, Llama Scout, Gemini, Grok) to catch hallucinations before publication
 - **Live dashboards** — serverless HTML/JS dashboards with Chart.js and interactive entity graphs (NetworkX + PyVis), fed by scheduled GitHub Actions pipelines
 - **Temporal correlation frameworks** — lag analysis, permutation testing, Granger causality, DoWhy causal inference
-- **Civic technology** — NLP-powered readability tools, BYOK chatbots, legislative transparency apps
+- **Civic accountability tools** — accountability-bypass mechanism classifiers, NLP-powered readability tools, BYOK chatbots, legislative transparency apps
 - **Reproducible research** — every finding ships with verification scripts; failed predictions documented publicly
 
 ---
