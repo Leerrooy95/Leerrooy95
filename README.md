@@ -12,15 +12,13 @@
 
 **19D Army Veteran** building automated intelligence pipelines, live analytical dashboards, and civic technology tools. First line of Python: October 2025.
 
-**[🌐 Portfolio →](https://leerrooy95.github.io)** · **[📊 Live Dashboard →](https://regulatedfriction.me)** · **[🤖 OSINT ChatBot →](https://personal-chatbot-qej0.onrender.com/login)** · **[📜 Bill Translator →](https://bill-translator.onrender.com/)**
+**[🌐 Portfolio →](https://leerrooy95.github.io)** · **[🔧 Friction Breaker →](https://regulatedfriction.me)** · **[🤖 OSINT ChatBot →](https://personal-chatbot-qej0.onrender.com/login)** · **[📜 Bill Translator →](https://bill-translator.onrender.com/)**
 
 ---
 
 ### 📌 Featured Projects
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v12.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. 8 years of data, 66 verified event pairs, 16 independent robustness tests (Opus 4.6). Includes a structured AI context index tracking 15 active leverage nodes and reproducible correlation scripts.
-
-The automated pipeline at **[regulatedfriction.me](https://regulatedfriction.me)** has been paused to reduce API costs. Daily intelligence updates are now published to [`DAILY_REPORTS/`](https://github.com/Leerrooy95/The_Regulated_Friction_Project/tree/main/DAILY_REPORTS) once a day — Claude reads the full `_AI_CONTEXT_INDEX` knowledge base and generates a plain-language intelligence summary. The nine-tab dashboard remains available as a static archive with Chart.js visualizations, interactive entity relationship graph (NetworkX + PyVis), and public prediction tracker.
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v12.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. 8 years of data, 66 verified event pairs, 16 independent robustness tests (Opus 4.6). Tracks 15 active leverage nodes. Daily intelligence updates published to [`DAILY_REPORTS/`](https://github.com/Leerrooy95/The_Regulated_Friction_Project/tree/main/DAILY_REPORTS). The nine-tab dashboard at regulatedfriction.me is a static archive; the automated pipeline is paused to reduce API costs.
 
 | Finding | Value |
 |---------|-------|
@@ -30,7 +28,18 @@ The automated pipeline at **[regulatedfriction.me](https://regulatedfriction.me)
 | Independent verification | 16 statistical tests by Opus 4.6 — all passed |
 | Predictions | Falsifiable predictions tracked publicly — failures documented alongside confirmations |
 
-**[Friction Breaker](https://github.com/Leerrooy95/Friction_Breaker)** — Open-source mechanism classifier and countermeasure engine. Paste any news article, executive order, or legislative text: GLiNER2 extracts entities locally (zero-cost), the classifier matches them against a taxonomy of **54 documented accountability-bypassing mechanisms** across 8 categories (derived from The Regulated Friction Project), and Claude generates ranked countermeasures — hardest to reverse first — in plain English anyone can read. BYOK. No data stored server-side.
+**[Friction Breaker](https://github.com/Leerrooy95/Friction_Breaker)** — Mechanism classifier and countermeasure engine. Paste any news article, executive order, or legislative text: GLiNER2 extracts entities locally (zero-cost), the classifier matches them against a taxonomy of **73 documented accountability-bypassing mechanisms** across 8 categories, and Claude generates ranked countermeasures — hardest to reverse first — in plain English anyone can read.
+
+**[Hosted at regulatedfriction.me](https://regulatedfriction.me)** — Sign in with Discord to start analyzing. No API key, no setup required.
+
+| Tier | Analyses/month | How to get it |
+|------|---------------|---------------|
+| Observer | 3 | Just sign in with Discord (free) |
+| Supporter | 20 | $5/mo on Patreon |
+| Sustainer | 60 | $10/mo on Patreon |
+| Analyst | 200 | $25/mo on Patreon |
+
+Prefer to run it yourself? The open-source BYOK version runs locally with your own Anthropic API key — no account needed.
 
 **[OSINT ChatBot](https://github.com/Leerrooy95/OSINT_ChatBot)** — BYOK Flask chatbot on Render. Users supply their own Anthropic API key (never stored server-side). Knowledge base injected from `_AI_CONTEXT_INDEX/` at startup. Rate limiting, CSRF protection, DOMPurify sanitization, full security headers.
 
