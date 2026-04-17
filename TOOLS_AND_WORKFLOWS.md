@@ -11,7 +11,8 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 | Service | URL | Hosted On | Source Repo |
 |---------|-----|-----------|-------------|
-| Live Intelligence Dashboard | [regulatedfriction.me](https://regulatedfriction.me) | GitHub Pages (Live_Trackers, private) | — |
+| Friction Breaker (hosted) | [regulatedfriction.me](https://regulatedfriction.me) | GitHub Pages / private server | [Friction_Breaker](https://github.com/Leerrooy95/Friction_Breaker) |
+| Live Intelligence Dashboard (static archive) | [regulatedfriction.me](https://regulatedfriction.me) | GitHub Pages (Live_Trackers, private) | — |
 | Product Store (Creem) | [store.regulatedfriction.me](https://store.regulatedfriction.me) | Creem | — |
 | Product Store (Gumroad) | [leroyswebdevelopment.tech](https://leroyswebdevelopment.tech/) | Gumroad | — |
 | Gradient AI Chatbot | Embedded on regulatedfriction.me | Gradient AI (DigitalOcean) | — |
@@ -272,14 +273,27 @@ A reference for AI assistants and collaborators. Describes every active reposito
 **How it works:**
 1. User pastes text (news article, executive order, bill text, regulatory filing, etc.) — or passes a URL or CLI argument
 2. **GLiNER2** extracts entities locally (205M params, Apache 2.0, zero-cost, runs on CPU)
-3. **Mechanism Classifier** matches entities against a taxonomy of **54 documented mechanisms** across **8 categories** extracted from The Regulated Friction Project
-4. **Claude API** (user's own key) generates a countermeasure analysis report — ranked by durability (hardest to reverse first) — in plain English at 8th-grade reading level
+3. **Mechanism Classifier** matches entities against a taxonomy of **73 documented mechanisms** across **8 categories** extracted from The Regulated Friction Project
+4. **Claude API** (user's own key, or the hosted service's backend) generates a countermeasure analysis report — ranked by durability (hardest to reverse first) — in plain English at 8th-grade reading level
 
 **Output includes:**
 - Which mechanisms are in play and how they work
 - Specific countermeasures per mechanism, ranked by durability
 - Who can act: citizens, state legislatures, Congress, or courts
 - Plain-English summary at 8th-grade reading level
+
+**Hosted service ([regulatedfriction.me](https://regulatedfriction.me)):**
+- Sign in with Discord — no API key, no setup required
+- Patreon integration (private repository, same structural pattern as the open-source app) gates analysis quotas by tier
+
+| Tier | Analyses/month | How to get it |
+|------|---------------|---------------|
+| Observer | 3 | Just sign in with Discord (free) |
+| Supporter | 20 | $5/mo on Patreon |
+| Sustainer | 60 | $10/mo on Patreon |
+| Analyst | 200 | $25/mo on Patreon |
+
+**BYOK / self-hosted version:** Open source at [Friction_Breaker](https://github.com/Leerrooy95/Friction_Breaker). Runs locally on Python ≥ 3.10 with a user-supplied Anthropic API key. No account or Discord login needed.
 
 **Mechanism taxonomy structure:**
 
@@ -291,13 +305,13 @@ A reference for AI assistants and collaborators. Describes every active reposito
 | Reversal Pathways | Specific countermeasures ranked by durability |
 | Real Examples | Verified instances from the research |
 
-**8 categories, 54 mechanisms.** See [`MECHANISM_CLASSIFIER_README.md`](https://github.com/Leerrooy95/Friction_Breaker/blob/main/MECHANISM_CLASSIFIER_README.md) for full taxonomy documentation.
+**8 categories, 73 mechanisms.** See [`MECHANISM_CLASSIFIER_README.md`](https://github.com/Leerrooy95/Friction_Breaker/blob/main/MECHANISM_CLASSIFIER_README.md) for full taxonomy documentation.
 
 **Security:** BYOK — API key never stored or logged; in the web UI it stays in the browser and is sent directly to Anthropic per-request. No data persistence. SSRF protection on URL fetching. GLiNER2 runs entirely locally.
 
 **CI:** GitHub Actions — lint (ruff), pytest across Python 3.10–3.13, pip-audit security scan. Dependabot monitors pip and Actions dependencies weekly.
 
-**Deployment:** Local (localhost:5000) or any server running Python ≥ 3.10. No external infrastructure required.
+**Deployment:** Hosted at regulatedfriction.me (Discord OAuth + Patreon tier gating, private repo). Also available as a local install (localhost:5000) or any server running Python ≥ 3.10.
 
 **License:** MIT
 
