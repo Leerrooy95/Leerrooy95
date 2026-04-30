@@ -18,7 +18,7 @@
 
 ### 📌 Featured Projects
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v12.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. 8 years of data, 66 verified event pairs, 16 independent robustness tests (Opus 4.6). Tracks 15 active leverage nodes. Daily intelligence updates published to [`DAILY_REPORTS/`](https://github.com/Leerrooy95/The_Regulated_Friction_Project/tree/main/DAILY_REPORTS). The nine-tab dashboard at regulatedfriction.me is a static archive; the automated pipeline is paused to reduce API costs.
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v12.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. 8 years of data, 66 verified event pairs, 16 independent robustness tests (Opus 4.6). Tracks 15 active leverage nodes. Daily intelligence updates published to [`DAILY_REPORTS/`](https://github.com/Leerrooy95/The_Regulated_Friction_Project/tree/main/DAILY_REPORTS).
 
 | Finding | Value |
 |---------|-------|
