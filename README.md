@@ -8,9 +8,9 @@
 ![NetworkX](https://img.shields.io/badge/NetworkX-013243?style=flat&logo=python&logoColor=white)
 ![GLiNER2](https://img.shields.io/badge/GLiNER2-Local%20NER%20%7C%20Zero--Cost%20Entity%20Extraction-6B7280?style=flat)
 
-## Threat Intelligence Analyst | OSINT & Quantitative Methods
+## Systematic Accountability Countermeasures (SAC)
 
-**19D Army Veteran** building automated intelligence pipelines, live analytical dashboards, and civic technology tools. First line of Python: October 2025.
+**19D Army Veteran** building automated OSINT pipelines, live analytical dashboards, and civic accountability tools. First line of Python: October 2025.
 
 **[🌐 Portfolio →](https://leerrooy95.github.io)** · **[🔧 Friction Breaker →](https://regulatedfriction.me)** · **[🤖 OSINT ChatBot →](https://personal-chatbot-qej0.onrender.com/login)** · **[📜 Bill Translator →](https://bill-translator.onrender.com/)**
 
@@ -28,7 +28,7 @@
 | Independent verification | 16 statistical tests by Opus 4.6 — all passed |
 | Predictions | Falsifiable predictions tracked publicly — failures documented alongside confirmations |
 
-**[Friction Breaker](https://github.com/Leerrooy95/Friction_Breaker)** — Mechanism classifier and countermeasure engine. Paste any news article, executive order, or legislative text: GLiNER2 extracts entities locally (zero-cost), the classifier matches them against a taxonomy of **73 documented accountability-bypassing mechanisms** across 8 categories, and Claude generates ranked countermeasures — hardest to reverse first — in plain English anyone can read.
+**[Friction Breaker](https://github.com/Leerrooy95/Friction_Breaker)** — Mechanism classifier and countermeasure engine. Paste any news article, executive order, or legislative text: GLiNER2 extracts entities locally (zero-cost), the classifier matches them against a taxonomy of **76 documented accountability-bypassing mechanisms** across 8 categories, and Claude generates ranked countermeasures — hardest to reverse first — in plain English anyone can read.
 
 **[Hosted at regulatedfriction.me](https://regulatedfriction.me)** — Sign in with Discord to start analyzing. No API key, no setup required.
 
@@ -87,7 +87,7 @@ The same pipeline architecture behind [regulatedfriction.me](https://regulatedfr
 
 ### 🤝 Open To
 
-- Threat intelligence and OSINT analyst roles
+- OSINT analyst, intelligence research, and policy analysis roles
 - Investigative data support and newsroom partnerships
 - Freelance intelligence pipeline development and consulting
 - Open-source collaboration on accountability tools
@@ -96,4 +96,4 @@ The same pipeline architecture behind [regulatedfriction.me](https://regulatedfr
 
 ---
 
-**Last Updated:** *April 8, 2026*
+**Last Updated:** *April 29, 2026*
