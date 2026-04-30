@@ -78,7 +78,7 @@ The same pipeline architecture behind [regulatedfriction.me](https://regulatedfr
 **$50 one-time purchase · Under $10/month to operate · GitHub Actions free tier**
 
 <p align="center">
-  <a href="https://store.regulatedfriction.me/"><strong>Buy on Creem →</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://leroyswebdevelopment.tech/"><strong>Buy on Gumroad →</strong></a>
+  <a href="https://store.regulatedfriction.me/"><strong>Buy on Creem →</strong></a>
 </p>
 
 > See the [Product Description](./Product_Description.md) for the full pipeline architecture walkthrough.
