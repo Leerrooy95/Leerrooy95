@@ -13,7 +13,6 @@ A reference for AI assistants and collaborators. Describes every active reposito
 |---------|-----|-----------|-------------|
 | Friction Breaker (hosted) | [regulatedfriction.me](https://regulatedfriction.me) | DigitalOcean + Cloudflare Worker | [Friction_Breaker](https://github.com/Leerrooy95/Friction_Breaker) |
 | Product Store (Creem) | [store.regulatedfriction.me](https://store.regulatedfriction.me) | Creem | — |
-| Product Store (Gumroad) | [leroyswebdevelopment.tech](https://leroyswebdevelopment.tech/) | Gumroad | — |
 | Gradient AI Chatbot | Embedded on regulatedfriction.me | Gradient AI (DigitalOcean) | — |
 | Federal Register Scraper | Automated | DigitalOcean | Private |
 | DOJ Press Release Scraper | Automated | DigitalOcean | Private |
@@ -322,9 +321,7 @@ A reference for AI assistants and collaborators. Describes every active reposito
 
 **Price:** $50 one-time purchase · Under $10/month to operate (API costs)
 
-**Stores:**
-- **Creem:** [store.regulatedfriction.me](https://store.regulatedfriction.me)
-- **Gumroad:** [leroyswebdevelopment.tech](https://leroyswebdevelopment.tech/)
+**Store:** [store.regulatedfriction.me](https://store.regulatedfriction.me) (Creem)
 
 **What it includes:**
 - 11 Python scripts (10 pipeline stages + knowledge-base sync utility)
