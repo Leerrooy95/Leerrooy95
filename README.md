@@ -8,9 +8,9 @@
 ![NetworkX](https://img.shields.io/badge/NetworkX-013243?style=flat&logo=python&logoColor=white)
 ![GLiNER2](https://img.shields.io/badge/GLiNER2-Local%20NER%20%7C%20Zero--Cost%20Entity%20Extraction-6B7280?style=flat)
 
-## Systematic Accountability Countermeasures (SAC)
+## Welcome to Leroy's Profile!
 
-**19D Army Veteran** building automated OSINT pipelines, live analytical dashboards, and civic accountability tools. First line of Python: October 2025.
+**19D Army Veteran** building automated OSINT pipelines, research, and civic accountability tools.
 
 **[🌐 Portfolio →](https://leerrooy95.github.io)** · **[🔧 Friction Breaker →](https://regulatedfriction.me)** · **[🤖 OSINT ChatBot →](https://personal-chatbot-qej0.onrender.com/login)** · **[📜 Bill Translator →](https://bill-translator.onrender.com/)**
 
@@ -19,14 +19,6 @@
 ### 📌 Featured Projects
 
 **[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v12.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. 8 years of data, 66 verified event pairs, 16 independent robustness tests (Opus 4.6). Tracks 15 active leverage nodes. Daily intelligence updates published to [`DAILY_REPORTS/`](https://github.com/Leerrooy95/The_Regulated_Friction_Project/tree/main/DAILY_REPORTS).
-
-| Finding | Value |
-|---------|-------|
-| Core correlation | r = +0.6196 (p = 0.0004) |
-| Convergence correlation | r = +0.6685 (p < 0.0001, n = 229 weeks) |
-| Robustness | Permutation (p < 0.001), Granger causality (F = 32.49, p < 0.0001), bootstrap (p = 0.008) |
-| Independent verification | 16 statistical tests by Opus 4.6 — all passed |
-| Predictions | Falsifiable predictions tracked publicly — failures documented alongside confirmations |
 
 **[Friction Breaker](https://github.com/Leerrooy95/Friction_Breaker)** — Mechanism classifier and countermeasure engine. Paste any news article, executive order, or legislative text: GLiNER2 extracts entities locally (zero-cost), the classifier matches them against a taxonomy of **76 documented accountability-bypassing mechanisms** across 8 categories, and Claude generates ranked countermeasures — hardest to reverse first — in plain English anyone can read.
 
@@ -41,11 +33,7 @@
 
 Prefer to run it yourself? The open-source BYOK version runs locally with your own Anthropic API key — no account needed.
 
-**[OSINT ChatBot](https://github.com/Leerrooy95/OSINT_ChatBot)** — BYOK Flask chatbot on Render. Users supply their own Anthropic API key (never stored server-side). Knowledge base injected from `_AI_CONTEXT_INDEX/` at startup. Rate limiting, CSRF protection, DOMPurify sanitization, full security headers.
-
 **[Bill Translator](https://github.com/Leerrooy95/Bill_Translator)** — Flask app that rewrites dense legal text to 8th-grade readability while preserving legal intent. Built for Arkansas Act 602. Meaning drift detection, three translation modes, automated Flesch-Kincaid scoring, 31 tests. Deployed on Render.
-
-**[State Policy Analysis](https://github.com/Leerrooy95/State_Policy_Analysis)** *(v1.4)* — Tracks 42 federal funding withholding events across 27 states by data center policy posture. Six statistical tests (ANOVA, Kruskal-Wallis, DoWhy causal inference), transparent corrections of prior findings.
 
 **[UVB-76 Signal Analysis](https://github.com/Leerrooy95/UVB-76-Structured-Signal-Analysis)** — 15-year empirical analysis of Russia's UVB-76 shortwave station. K-means clustering and permutation testing (p < .0005) identified four operational modes and a shift from training-cycle to event-driven signaling.
 
