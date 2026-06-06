@@ -4,7 +4,6 @@
 ![Brave Search](https://img.shields.io/badge/Brave_Search_API-FB542B?style=flat&logo=brave&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
 ![HTML/CSS/JS](https://img.shields.io/badge/HTML%2FCSS%2FJS-E34F26?style=flat&logo=html5&logoColor=white)
-![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flat&logo=digitalocean&logoColor=white)
 ![NetworkX](https://img.shields.io/badge/NetworkX-013243?style=flat&logo=python&logoColor=white)
 ![GLiNER2](https://img.shields.io/badge/GLiNER2-Local%20NER%20%7C%20Zero--Cost%20Entity%20Extraction-6B7280?style=flat)
 
@@ -12,26 +11,15 @@
 
 **19D Army Veteran** building automated OSINT pipelines, research, and civic accountability tools.
 
-**[🌐 Portfolio →](https://leerrooy95.github.io)** · **[🔧 Friction Breaker →](https://regulatedfriction.me)** · **[🤖 OSINT ChatBot →](https://personal-chatbot-qej0.onrender.com/login)** · **[📜 Bill Translator →](https://bill-translator.onrender.com/)**
+**[🌐 Portfolio →](https://leerrooy95.github.io)** · **[🔧 Friction Breaker →](https://github.com/Leerrooy95/Friction_Breaker)** · **[🤖 OSINT ChatBot →](https://personal-chatbot-qej0.onrender.com/login)** · **[📜 Bill Translator →](https://bill-translator.onrender.com/)**
 
 ---
 
 ### 📌 Featured Projects
 
-**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v12.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. 8 years of data, 66 verified event pairs, 16 independent robustness tests (Opus 4.6). Tracks 15 active leverage nodes. Daily intelligence updates published to [`DAILY_REPORTS/`](https://github.com/Leerrooy95/The_Regulated_Friction_Project/tree/main/DAILY_REPORTS).
+**[The Regulated Friction Project](https://github.com/Leerrooy95/The_Regulated_Friction_Project)** *(v12.3)* — Research repository documenting temporal correlations between geopolitical friction events and institutional capital flows. 8 years of data, 66 verified event pairs, 16 independent robustness tests (Opus 4.6). Tracks 15 active leverage nodes.
 
-**[Friction Breaker](https://github.com/Leerrooy95/Friction_Breaker)** — Mechanism classifier and countermeasure engine. Paste any news article, executive order, or legislative text: GLiNER2 extracts entities locally (zero-cost), the classifier matches them against a taxonomy of **76 documented accountability-bypassing mechanisms** across 8 categories, and Claude generates ranked countermeasures — hardest to reverse first — in plain English anyone can read.
-
-**[Hosted at regulatedfriction.me](https://regulatedfriction.me)** — Sign in with Discord to start analyzing. No API key, no setup required.
-
-| Tier | Analyses/month | How to get it |
-|------|---------------|---------------|
-| Observer | 3 | Just sign in with Discord (free) |
-| Supporter | 20 | $5/mo on Patreon |
-| Sustainer | 60 | $10/mo on Patreon |
-| Analyst | 200 | $25/mo on Patreon |
-
-Prefer to run it yourself? The open-source BYOK version runs locally with your own Anthropic API key — no account needed.
+**[Friction Breaker](https://github.com/Leerrooy95/Friction_Breaker)** — Mechanism classifier and countermeasure engine. Paste any news article, executive order, or legislative text: GLiNER2 extracts entities locally (zero-cost), the classifier matches them against a taxonomy of **76 documented accountability-bypassing mechanisms** across 8 categories, and Claude generates ranked countermeasures — hardest to reverse first — in plain English anyone can read. Open source and BYOK: runs locally with your own Anthropic API key, no account needed.
 
 **[Bill Translator](https://github.com/Leerrooy95/Bill_Translator)** — Flask app that rewrites dense legal text to 8th-grade readability while preserving legal intent. Built for Arkansas Act 602. Meaning drift detection, three translation modes, automated Flesch-Kincaid scoring, 31 tests. Deployed on Render.
 
@@ -54,7 +42,7 @@ Prefer to run it yourself? The open-source BYOK version runs locally with your o
 
 **Build your own live intelligence dashboard in under 15 minutes.**
 
-The same pipeline architecture behind [regulatedfriction.me](https://regulatedfriction.me) — packaged as a turnkey `.tar.xz` you can deploy to any GitHub repo. Define your own topics, add two API keys, and it runs itself. Twice a day, every day.
+A production OSINT pipeline packaged as a turnkey `.tar.xz` you can deploy to any GitHub repo. Define your own topics, add two API keys, and it runs itself. Twice a day, every day.
 
 **What you get:**
 - Ten-stage automated pipeline — node tracking, dual-engine entity extraction (GLiNER2 + Llama Scout), convergence detection, three-pass daily intelligence, web-grounded fact verification, rhetoric vs. reality analysis, interactive entity graph
@@ -84,4 +72,4 @@ The same pipeline architecture behind [regulatedfriction.me](https://regulatedfr
 
 ---
 
-**Last Updated:** *April 30, 2026*
+**Last Updated:** *June 6, 2026*
